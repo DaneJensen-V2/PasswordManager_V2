@@ -39,7 +39,7 @@ class RegisterViewController: UIViewController {
                  print("There was an issue saving data to firestore, \(e)")
              }
              else{
-                 print("Successfully saved data.")
+                 print("Successfully saved data.") 
              }
          }
     }

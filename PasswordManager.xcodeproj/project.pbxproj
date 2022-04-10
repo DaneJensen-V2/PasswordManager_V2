@@ -23,6 +23,8 @@
 		A581683527FCE1DC00522980 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A581683427FCE1DC00522980 /* GoogleService-Info.plist */; };
 		A581683627FCE1DC00522980 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A581683427FCE1DC00522980 /* GoogleService-Info.plist */; };
 		A581683727FCE1DC00522980 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A581683427FCE1DC00522980 /* GoogleService-Info.plist */; };
+		A5BA9EA82803505200A974D4 /* SecurityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BA9EA72803505200A974D4 /* SecurityViewController.swift */; };
+		A5BA9EAA2803561C00A974D4 /* Hashes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BA9EA92803561C00A974D4 /* Hashes.swift */; };
 		A5EA805727FFA5B2008EBB1F /* blurry-gradient-haikei.svg in Resources */ = {isa = PBXBuildFile; fileRef = A5EA805627FFA5B2008EBB1F /* blurry-gradient-haikei.svg */; };
 		A5EA805927FFA5DA008EBB1F /* blurry-gradient-haikei.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EA805827FFA5DA008EBB1F /* blurry-gradient-haikei.png */; };
 		A5EA805B2802AB4D008EBB1F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EA805A2802AB4D008EBB1F /* LoginViewController.swift */; };
@@ -73,6 +75,8 @@
 		A567FEC727FCDEF00053A81B /* PasswordManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordManagerUITests.swift; sourceTree = "<group>"; };
 		A567FEC927FCDEF00053A81B /* PasswordManagerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordManagerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A581683427FCE1DC00522980 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		A5BA9EA72803505200A974D4 /* SecurityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityViewController.swift; sourceTree = "<group>"; };
+		A5BA9EA92803561C00A974D4 /* Hashes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hashes.swift; sourceTree = "<group>"; };
 		A5EA805627FFA5B2008EBB1F /* blurry-gradient-haikei.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "blurry-gradient-haikei.svg"; sourceTree = "<group>"; };
 		A5EA805827FFA5DA008EBB1F /* blurry-gradient-haikei.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blurry-gradient-haikei.png"; sourceTree = "<group>"; };
 		A5EA805A2802AB4D008EBB1F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				A5EA805E2802B26C008EBB1F /* UserData.swift */,
+				A5BA9EA92803561C00A974D4 /* Hashes.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 				A555036527FF8DB400F44E3E /* PasswordViewController.swift */,
 				A5EA805A2802AB4D008EBB1F /* LoginViewController.swift */,
 				A5EA80602802B7DA008EBB1F /* RegisterViewController.swift */,
+				A5BA9EA72803505200A974D4 /* SecurityViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -472,6 +478,8 @@
 				A555036627FF8DB400F44E3E /* PasswordViewController.swift in Sources */,
 				A567FEA727FCDEEF0053A81B /* AppDelegate.swift in Sources */,
 				A5EA805B2802AB4D008EBB1F /* LoginViewController.swift in Sources */,
+				A5BA9EA82803505200A974D4 /* SecurityViewController.swift in Sources */,
+				A5BA9EAA2803561C00A974D4 /* Hashes.swift in Sources */,
 				A567FEA927FCDEEF0053A81B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
