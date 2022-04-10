@@ -10,6 +10,7 @@
 		245467A83F9475B6881C7F61 /* Pods_PasswordManager_PasswordManagerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64607F9A2381191FC636E7F9 /* Pods_PasswordManager_PasswordManagerUITests.framework */; };
 		488132785F2853ACF0544771 /* Pods_PasswordManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 615D92009747D3DE90B5D0EA /* Pods_PasswordManager.framework */; };
 		A555036627FF8DB400F44E3E /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A555036527FF8DB400F44E3E /* PasswordViewController.swift */; };
+		A555036B27FF998300F44E3E /* wave-haikei (3).svg in Resources */ = {isa = PBXBuildFile; fileRef = A555036A27FF998300F44E3E /* wave-haikei (3).svg */; };
 		A567FEA727FCDEEF0053A81B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A567FEA627FCDEEF0053A81B /* AppDelegate.swift */; };
 		A567FEA927FCDEEF0053A81B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A567FEA827FCDEEF0053A81B /* SceneDelegate.swift */; };
 		A567FEAB27FCDEEF0053A81B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A567FEAA27FCDEEF0053A81B /* ViewController.swift */; };
@@ -22,6 +23,12 @@
 		A581683527FCE1DC00522980 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A581683427FCE1DC00522980 /* GoogleService-Info.plist */; };
 		A581683627FCE1DC00522980 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A581683427FCE1DC00522980 /* GoogleService-Info.plist */; };
 		A581683727FCE1DC00522980 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A581683427FCE1DC00522980 /* GoogleService-Info.plist */; };
+		A5EA805727FFA5B2008EBB1F /* blurry-gradient-haikei.svg in Resources */ = {isa = PBXBuildFile; fileRef = A5EA805627FFA5B2008EBB1F /* blurry-gradient-haikei.svg */; };
+		A5EA805927FFA5DA008EBB1F /* blurry-gradient-haikei.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EA805827FFA5DA008EBB1F /* blurry-gradient-haikei.png */; };
+		A5EA805B2802AB4D008EBB1F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EA805A2802AB4D008EBB1F /* LoginViewController.swift */; };
+		A5EA805D2802AF59008EBB1F /* layered-waves-haikei.svg in Resources */ = {isa = PBXBuildFile; fileRef = A5EA805C2802AF59008EBB1F /* layered-waves-haikei.svg */; };
+		A5EA805F2802B26C008EBB1F /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EA805E2802B26C008EBB1F /* UserData.swift */; };
+		A5EA80612802B7DA008EBB1F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EA80602802B7DA008EBB1F /* RegisterViewController.swift */; };
 		B89A63ECD26CED3D737FCCBB /* Pods_PasswordManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBBF8D9E382D65F25E3F5828 /* Pods_PasswordManagerTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +58,7 @@
 		8EF20429A7E6777242F6B7CD /* Pods-PasswordManager-PasswordManagerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasswordManager-PasswordManagerUITests.release.xcconfig"; path = "Target Support Files/Pods-PasswordManager-PasswordManagerUITests/Pods-PasswordManager-PasswordManagerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9C90853F391616B3FB01920C /* Pods-PasswordManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasswordManager.debug.xcconfig"; path = "Target Support Files/Pods-PasswordManager/Pods-PasswordManager.debug.xcconfig"; sourceTree = "<group>"; };
 		A555036527FF8DB400F44E3E /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
+		A555036A27FF998300F44E3E /* wave-haikei (3).svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wave-haikei (3).svg"; sourceTree = "<group>"; };
 		A567FEA327FCDEEF0053A81B /* PasswordManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasswordManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A567FEA627FCDEEF0053A81B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A567FEA827FCDEEF0053A81B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +73,12 @@
 		A567FEC727FCDEF00053A81B /* PasswordManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordManagerUITests.swift; sourceTree = "<group>"; };
 		A567FEC927FCDEF00053A81B /* PasswordManagerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordManagerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A581683427FCE1DC00522980 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		A5EA805627FFA5B2008EBB1F /* blurry-gradient-haikei.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "blurry-gradient-haikei.svg"; sourceTree = "<group>"; };
+		A5EA805827FFA5DA008EBB1F /* blurry-gradient-haikei.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blurry-gradient-haikei.png"; sourceTree = "<group>"; };
+		A5EA805A2802AB4D008EBB1F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A5EA805C2802AF59008EBB1F /* layered-waves-haikei.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "layered-waves-haikei.svg"; sourceTree = "<group>"; };
+		A5EA805E2802B26C008EBB1F /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		A5EA80602802B7DA008EBB1F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		DBBF8D9E382D65F25E3F5828 /* Pods_PasswordManagerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PasswordManagerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFC104CC88BC91F8C761471A /* Pods-PasswordManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasswordManagerTests.debug.xcconfig"; path = "Target Support Files/Pods-PasswordManagerTests/Pods-PasswordManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +121,34 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A555036727FF971000F44E3E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A5EA805E2802B26C008EBB1F /* UserData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A555036827FF972100F44E3E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A567FEAC27FCDEEF0053A81B /* Main.storyboard */,
+				A567FEB127FCDEF00053A81B /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A555036927FF972900F44E3E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A567FEAA27FCDEEF0053A81B /* ViewController.swift */,
+				A555036527FF8DB400F44E3E /* PasswordViewController.swift */,
+				A5EA805A2802AB4D008EBB1F /* LoginViewController.swift */,
+				A5EA80602802B7DA008EBB1F /* RegisterViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		A567FE9A27FCDEEF0053A81B = {
 			isa = PBXGroup;
 			children = (
@@ -132,15 +174,18 @@
 		A567FEA527FCDEEF0053A81B /* PasswordManager */ = {
 			isa = PBXGroup;
 			children = (
+				A555036727FF971000F44E3E /* Model */,
+				A555036927FF972900F44E3E /* Controller */,
+				A555036827FF972100F44E3E /* View */,
 				A567FEA627FCDEEF0053A81B /* AppDelegate.swift */,
 				A567FEA827FCDEEF0053A81B /* SceneDelegate.swift */,
-				A567FEAA27FCDEEF0053A81B /* ViewController.swift */,
-				A555036527FF8DB400F44E3E /* PasswordViewController.swift */,
-				A567FEAC27FCDEEF0053A81B /* Main.storyboard */,
+				A555036A27FF998300F44E3E /* wave-haikei (3).svg */,
+				A5EA805C2802AF59008EBB1F /* layered-waves-haikei.svg */,
 				A567FEAF27FCDEF00053A81B /* Assets.xcassets */,
-				A567FEB127FCDEF00053A81B /* LaunchScreen.storyboard */,
 				A581683427FCE1DC00522980 /* GoogleService-Info.plist */,
+				A5EA805827FFA5DA008EBB1F /* blurry-gradient-haikei.png */,
 				A567FEB427FCDEF00053A81B /* Info.plist */,
+				A5EA805627FFA5B2008EBB1F /* blurry-gradient-haikei.svg */,
 			);
 			path = PasswordManager;
 			sourceTree = "<group>";
@@ -285,9 +330,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A567FEB327FCDEF00053A81B /* LaunchScreen.storyboard in Resources */,
+				A5EA805727FFA5B2008EBB1F /* blurry-gradient-haikei.svg in Resources */,
 				A581683527FCE1DC00522980 /* GoogleService-Info.plist in Resources */,
 				A567FEB027FCDEF00053A81B /* Assets.xcassets in Resources */,
+				A555036B27FF998300F44E3E /* wave-haikei (3).svg in Resources */,
+				A5EA805927FFA5DA008EBB1F /* blurry-gradient-haikei.png in Resources */,
 				A567FEAE27FCDEEF0053A81B /* Main.storyboard in Resources */,
+				A5EA805D2802AF59008EBB1F /* layered-waves-haikei.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,9 +466,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5EA805F2802B26C008EBB1F /* UserData.swift in Sources */,
 				A567FEAB27FCDEEF0053A81B /* ViewController.swift in Sources */,
+				A5EA80612802B7DA008EBB1F /* RegisterViewController.swift in Sources */,
 				A555036627FF8DB400F44E3E /* PasswordViewController.swift in Sources */,
 				A567FEA727FCDEEF0053A81B /* AppDelegate.swift in Sources */,
+				A5EA805B2802AB4D008EBB1F /* LoginViewController.swift in Sources */,
 				A567FEA927FCDEEF0053A81B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

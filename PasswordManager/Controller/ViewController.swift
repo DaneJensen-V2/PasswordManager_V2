@@ -9,10 +9,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        //COMMIT TEST
+        
+        loginButton.layer.cornerRadius = 10
+        registerButton.layer.cornerRadius = 10
     }
 
 
