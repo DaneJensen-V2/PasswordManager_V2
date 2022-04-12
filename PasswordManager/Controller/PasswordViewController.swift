@@ -17,7 +17,7 @@ class PasswordViewController: UIViewController, UITableViewDelegate {
         
         
        // passwordTable.register(UINib.init(nibName: "PasswordCell", bundle: nil), forCellReuseIdentifier: "PasswordCell")
-    }
+        passwordTable.register(UINib(nibName : "PasswordTableViewCell", bundle: nil) , forCellReuseIdentifier: "PasswordCell")    }
     
 
     @IBAction func callAPI(_ sender: UIButton) {
