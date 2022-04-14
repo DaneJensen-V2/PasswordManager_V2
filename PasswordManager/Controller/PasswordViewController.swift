@@ -17,21 +17,26 @@ class PasswordViewController: UIViewController, UITableViewDelegate {
         
         
        // passwordTable.register(UINib.init(nibName: "PasswordCell", bundle: nil), forCellReuseIdentifier: "PasswordCell")
-        passwordTable.register(UINib(nibName : "PasswordTableViewCell", bundle: nil) , forCellReuseIdentifier: "PasswordCell")    }
-    
+        passwordTable.register(UINib(nibName : "PasswordTableViewCell", bundle: nil) , forCellReuseIdentifier: "PasswordCell")
+        
+        passwordTable.rowHeight = 80
 
-    @IBAction func callAPI(_ sender: UIButton) {
-        
-        
-        
     }
    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
+    @IBAction func addButton(_ sender: UIButton) {
+        
+    }
+    
 }
 
 
 extension PasswordViewController : UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 30
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

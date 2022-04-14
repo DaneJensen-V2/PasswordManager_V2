@@ -11,6 +11,10 @@
 		488132785F2853ACF0544771 /* Pods_PasswordManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 615D92009747D3DE90B5D0EA /* Pods_PasswordManager.framework */; };
 		A50AF01F28062236005FF5A1 /* PasswordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50AF01D28062236005FF5A1 /* PasswordTableViewCell.swift */; };
 		A50AF02028062236005FF5A1 /* PasswordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A50AF01E28062236005FF5A1 /* PasswordTableViewCell.xib */; };
+		A50AF02228062CDC005FF5A1 /* twitter.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A50AF02128062CDC005FF5A1 /* twitter.jpeg */; };
+		A50AF02428067FAF005FF5A1 /* PasswordStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50AF02328067FAF005FF5A1 /* PasswordStruct.swift */; };
+		A50AF0262808B491005FF5A1 /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50AF0252808B491005FF5A1 /* NewPasswordViewController.swift */; };
+		A50AF0282808C455005FF5A1 /* PasswordGeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50AF0272808C455005FF5A1 /* PasswordGeneratorViewController.swift */; };
 		A555036627FF8DB400F44E3E /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A555036527FF8DB400F44E3E /* PasswordViewController.swift */; };
 		A567FEA727FCDEEF0053A81B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A567FEA627FCDEEF0053A81B /* AppDelegate.swift */; };
 		A567FEA927FCDEEF0053A81B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A567FEA827FCDEEF0053A81B /* SceneDelegate.swift */; };
@@ -60,6 +64,10 @@
 		9C90853F391616B3FB01920C /* Pods-PasswordManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasswordManager.debug.xcconfig"; path = "Target Support Files/Pods-PasswordManager/Pods-PasswordManager.debug.xcconfig"; sourceTree = "<group>"; };
 		A50AF01D28062236005FF5A1 /* PasswordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTableViewCell.swift; sourceTree = "<group>"; };
 		A50AF01E28062236005FF5A1 /* PasswordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PasswordTableViewCell.xib; sourceTree = "<group>"; };
+		A50AF02128062CDC005FF5A1 /* twitter.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = twitter.jpeg; sourceTree = "<group>"; };
+		A50AF02328067FAF005FF5A1 /* PasswordStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordStruct.swift; sourceTree = "<group>"; };
+		A50AF0252808B491005FF5A1 /* NewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
+		A50AF0272808C455005FF5A1 /* PasswordGeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordGeneratorViewController.swift; sourceTree = "<group>"; };
 		A555036527FF8DB400F44E3E /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		A567FEA327FCDEEF0053A81B /* PasswordManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasswordManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A567FEA627FCDEEF0053A81B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +138,7 @@
 				A5BA9EA92803561C00A974D4 /* Hashes.swift */,
 				A50AF01D28062236005FF5A1 /* PasswordTableViewCell.swift */,
 				A50AF01E28062236005FF5A1 /* PasswordTableViewCell.xib */,
+				A50AF02328067FAF005FF5A1 /* PasswordStruct.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -151,6 +160,8 @@
 				A5EA805A2802AB4D008EBB1F /* LoginViewController.swift */,
 				A5EA80602802B7DA008EBB1F /* RegisterViewController.swift */,
 				A5BA9EA72803505200A974D4 /* SecurityViewController.swift */,
+				A50AF0252808B491005FF5A1 /* NewPasswordViewController.swift */,
+				A50AF0272808C455005FF5A1 /* PasswordGeneratorViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -186,6 +197,7 @@
 				A567FEA627FCDEEF0053A81B /* AppDelegate.swift */,
 				A567FEA827FCDEEF0053A81B /* SceneDelegate.swift */,
 				A5EA805C2802AF59008EBB1F /* layered-waves-haikei.svg */,
+				A50AF02128062CDC005FF5A1 /* twitter.jpeg */,
 				A567FEAF27FCDEF00053A81B /* Assets.xcassets */,
 				A581683427FCE1DC00522980 /* GoogleService-Info.plist */,
 				A567FEB427FCDEF00053A81B /* Info.plist */,
@@ -332,6 +344,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A50AF02228062CDC005FF5A1 /* twitter.jpeg in Resources */,
 				A567FEB327FCDEF00053A81B /* LaunchScreen.storyboard in Resources */,
 				A581683527FCE1DC00522980 /* GoogleService-Info.plist in Resources */,
 				A50AF02028062236005FF5A1 /* PasswordTableViewCell.xib in Resources */,
@@ -469,13 +482,16 @@
 			files = (
 				A50AF01F28062236005FF5A1 /* PasswordTableViewCell.swift in Sources */,
 				A5EA805F2802B26C008EBB1F /* UserData.swift in Sources */,
+				A50AF0262808B491005FF5A1 /* NewPasswordViewController.swift in Sources */,
 				A567FEAB27FCDEEF0053A81B /* ViewController.swift in Sources */,
 				A5EA80612802B7DA008EBB1F /* RegisterViewController.swift in Sources */,
 				A555036627FF8DB400F44E3E /* PasswordViewController.swift in Sources */,
+				A50AF0282808C455005FF5A1 /* PasswordGeneratorViewController.swift in Sources */,
 				A567FEA727FCDEEF0053A81B /* AppDelegate.swift in Sources */,
 				A5EA805B2802AB4D008EBB1F /* LoginViewController.swift in Sources */,
 				A5BA9EA82803505200A974D4 /* SecurityViewController.swift in Sources */,
 				A5BA9EAA2803561C00A974D4 /* Hashes.swift in Sources */,
+				A50AF02428067FAF005FF5A1 /* PasswordStruct.swift in Sources */,
 				A567FEA927FCDEEF0053A81B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

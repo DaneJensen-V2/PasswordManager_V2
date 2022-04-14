@@ -10,7 +10,7 @@ struct UserData : Codable{
     let  UserID : String
     let firstName : String
     let lastName : String
-    var hashedPasswords : [String]
+    var hashedPasswords : [passwordStruct]
     let phoneNumber : String
 
 
