@@ -7,6 +7,8 @@
 
 import UIKit
 import CryptoKit
+import Foundation
+
 
 var hashedList = [Hashes]()
 
@@ -35,6 +37,33 @@ class SecurityViewController: UIViewController {
         print(digest.data) // 20 bytes
         print(digest.hexStr) // 2AAE6C35C94FCFB415DBE95F408B9CE91EE846ED
         return digest.hexStr
+    }
+    @IBAction func memorablePass(_ sender: UIButton) {
+
+        let headers = [
+            "X-RapidAPI-Host": "wordsapiv1.p.rapidapi.com",
+            "X-RapidAPI-Key": "b1d23830cfmsh0296e66a07ace30p13e768jsnc5df9ffe1438"
+        ]
+
+        let request = NSMutableURLRequest(url: NSURL(string: "https://wordsapiv1.p.rapidapi.com/words/?lettersmin=5&lettersMax=6&partofspeech=noun&limit=100&frequencymin=8.03&page=2&random=true")! as URL,
+                                                cachePolicy: .useProtocolCachePolicy,
+                                            timeoutInterval: 10.0)
+        request.httpMethod = "GET"
+        request.allHTTPHeaderFields = headers
+
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+            if (error != nil) {
+                print(error)
+            } else {
+                let httpResponse = response as? HTTPURLResponse
+                let dataString = String(data: data!, encoding: .utf8)!
+
+                print(dataString)
+            }
+        })
+
+        dataTask.resume()
     }
     
     // Create URL

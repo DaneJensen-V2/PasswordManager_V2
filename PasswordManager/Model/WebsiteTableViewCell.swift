@@ -1,19 +1,19 @@
 //
-//  PasswordTableViewCell.swift
+//  WebsiteTableViewCell.swift
 //  PasswordManager
 //
-//  Created by Dane Jensen on 4/12/22.
+//  Created by Dane Jensen on 4/14/22.
 //
 
 import UIKit
 
-class PasswordTableViewCell: UITableViewCell {
+class WebsiteTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var websiteName: UILabel!
-    @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var passImage: UIImageView!
+    @IBOutlet weak var websiteLabel: UILabel!
+    @IBOutlet weak var websiteImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         // Initialization code
     }
 
@@ -24,3 +24,5 @@ class PasswordTableViewCell: UITableViewCell {
     }
     
 }
+
+

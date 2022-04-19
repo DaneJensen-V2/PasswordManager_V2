@@ -8,18 +8,23 @@
 import UIKit
 import Firebase
 
-class LoginViewController: UIViewController {
+var currentUser = UserData(UserID: "", firstName: "", lastName: "", hashedPasswords: [], phoneNumber: ""){
+    didSet {
+        print("arrayUpdated")
+        PasswordViewController().updateTable()
+    }
+}
+let db = Firestore.firestore()
 
+class LoginViewController: UIViewController {
+   
     @IBOutlet weak var passwordBox: UITextField!
     @IBOutlet weak var usernameBox: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
-    
-
-
     @IBAction func loginButton(_ sender: UIButton) {
         if let email = usernameBox.text, let password = passwordBox.text{
         Auth.auth().signIn(withEmail: email, password: password) {  authResult, error in
@@ -31,16 +36,25 @@ class LoginViewController: UIViewController {
 
                 self.present(alert, animated: true)
                 print(e.localizedDescription)
-            }
-            else{
-                print("Success")
-               // signedIn = true
-                self.performSegue(withIdentifier: "loginToHome", sender: nil)
+            }else{
+                let currentID = Auth.auth().currentUser
+                AuthManager().loadCurrentUser(user: currentID!) { success in
+                    print("User Loaded")
+                    self.performSegue(withIdentifier: "loginToHome", sender: nil)
 
-                //dismissParent = true
                 }
             }
         }
+                print("Success")
+               // signedIn = true
+
+                //dismissParent = true
+                
+            }
+        }
+    
+   
     }
     
-}
+    
+

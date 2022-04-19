@@ -6,18 +6,26 @@
 //
 
 import Foundation
+import UIKit
 struct passwordStruct : Codable{
     let  WebsiteName : String
-    let  WebsiteTitle : String
+    let  WebsiteURL : URL
     let  Image: String
     let  Username : String
-    var  Password : [String]
+    var  Password : String
 
-
+    init(WebsiteName : String, WebsiteURL : URL, Image : String, Username : String, Password : String){
+        self.WebsiteName = WebsiteName
+        self.WebsiteURL = WebsiteURL
+        self.Image = WebsiteName
+        self.Username = Username
+        self.Password = Password
+        
+    }
 
 enum CodingKeys: String, CodingKey {
        case WebsiteName
-       case WebsiteTitle
+       case WebsiteURL
        case Image
        case Username
        case Password

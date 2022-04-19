@@ -15,6 +15,12 @@
 		A50AF02428067FAF005FF5A1 /* PasswordStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50AF02328067FAF005FF5A1 /* PasswordStruct.swift */; };
 		A50AF0262808B491005FF5A1 /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50AF0252808B491005FF5A1 /* NewPasswordViewController.swift */; };
 		A50AF0282808C455005FF5A1 /* PasswordGeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50AF0272808C455005FF5A1 /* PasswordGeneratorViewController.swift */; };
+		A50AF02B2808F95A005FF5A1 /* WebsiteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50AF0292808F95A005FF5A1 /* WebsiteTableViewCell.swift */; };
+		A50AF02E280A1C8A005FF5A1 /* PassAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50AF02D280A1C8A005FF5A1 /* PassAddViewController.swift */; };
+		A50AF030280BEB65005FF5A1 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50AF02F280BEB65005FF5A1 /* AuthManager.swift */; };
+		A50AF032280E0909005FF5A1 /* SelectPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50AF031280E0909005FF5A1 /* SelectPasswordViewController.swift */; };
+		A50AF036280E15F4005FF5A1 /* Hulu-Logo-700x394.png in Resources */ = {isa = PBXBuildFile; fileRef = A50AF035280E15F4005FF5A1 /* Hulu-Logo-700x394.png */; };
+		A50AF038280E27F9005FF5A1 /* PasswordEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50AF037280E27F9005FF5A1 /* PasswordEditViewController.swift */; };
 		A555036627FF8DB400F44E3E /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A555036527FF8DB400F44E3E /* PasswordViewController.swift */; };
 		A567FEA727FCDEEF0053A81B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A567FEA627FCDEEF0053A81B /* AppDelegate.swift */; };
 		A567FEA927FCDEEF0053A81B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A567FEA827FCDEEF0053A81B /* SceneDelegate.swift */; };
@@ -68,6 +74,12 @@
 		A50AF02328067FAF005FF5A1 /* PasswordStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordStruct.swift; sourceTree = "<group>"; };
 		A50AF0252808B491005FF5A1 /* NewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
 		A50AF0272808C455005FF5A1 /* PasswordGeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordGeneratorViewController.swift; sourceTree = "<group>"; };
+		A50AF0292808F95A005FF5A1 /* WebsiteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteTableViewCell.swift; sourceTree = "<group>"; };
+		A50AF02D280A1C8A005FF5A1 /* PassAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassAddViewController.swift; sourceTree = "<group>"; };
+		A50AF02F280BEB65005FF5A1 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		A50AF031280E0909005FF5A1 /* SelectPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPasswordViewController.swift; sourceTree = "<group>"; };
+		A50AF035280E15F4005FF5A1 /* Hulu-Logo-700x394.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hulu-Logo-700x394.png"; sourceTree = "<group>"; };
+		A50AF037280E27F9005FF5A1 /* PasswordEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordEditViewController.swift; sourceTree = "<group>"; };
 		A555036527FF8DB400F44E3E /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		A567FEA327FCDEEF0053A81B /* PasswordManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasswordManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A567FEA627FCDEEF0053A81B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +151,7 @@
 				A50AF01D28062236005FF5A1 /* PasswordTableViewCell.swift */,
 				A50AF01E28062236005FF5A1 /* PasswordTableViewCell.xib */,
 				A50AF02328067FAF005FF5A1 /* PasswordStruct.swift */,
+				A50AF0292808F95A005FF5A1 /* WebsiteTableViewCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -148,6 +161,7 @@
 			children = (
 				A567FEAC27FCDEEF0053A81B /* Main.storyboard */,
 				A567FEB127FCDEF00053A81B /* LaunchScreen.storyboard */,
+				A50AF035280E15F4005FF5A1 /* Hulu-Logo-700x394.png */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -162,6 +176,10 @@
 				A5BA9EA72803505200A974D4 /* SecurityViewController.swift */,
 				A50AF0252808B491005FF5A1 /* NewPasswordViewController.swift */,
 				A50AF0272808C455005FF5A1 /* PasswordGeneratorViewController.swift */,
+				A50AF02D280A1C8A005FF5A1 /* PassAddViewController.swift */,
+				A50AF02F280BEB65005FF5A1 /* AuthManager.swift */,
+				A50AF031280E0909005FF5A1 /* SelectPasswordViewController.swift */,
+				A50AF037280E27F9005FF5A1 /* PasswordEditViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -345,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A50AF02228062CDC005FF5A1 /* twitter.jpeg in Resources */,
+				A50AF036280E15F4005FF5A1 /* Hulu-Logo-700x394.png in Resources */,
 				A567FEB327FCDEF00053A81B /* LaunchScreen.storyboard in Resources */,
 				A581683527FCE1DC00522980 /* GoogleService-Info.plist in Resources */,
 				A50AF02028062236005FF5A1 /* PasswordTableViewCell.xib in Resources */,
@@ -487,8 +506,13 @@
 				A5EA80612802B7DA008EBB1F /* RegisterViewController.swift in Sources */,
 				A555036627FF8DB400F44E3E /* PasswordViewController.swift in Sources */,
 				A50AF0282808C455005FF5A1 /* PasswordGeneratorViewController.swift in Sources */,
+				A50AF032280E0909005FF5A1 /* SelectPasswordViewController.swift in Sources */,
+				A50AF02E280A1C8A005FF5A1 /* PassAddViewController.swift in Sources */,
 				A567FEA727FCDEEF0053A81B /* AppDelegate.swift in Sources */,
+				A50AF038280E27F9005FF5A1 /* PasswordEditViewController.swift in Sources */,
+				A50AF030280BEB65005FF5A1 /* AuthManager.swift in Sources */,
 				A5EA805B2802AB4D008EBB1F /* LoginViewController.swift in Sources */,
+				A50AF02B2808F95A005FF5A1 /* WebsiteTableViewCell.swift in Sources */,
 				A5BA9EA82803505200A974D4 /* SecurityViewController.swift in Sources */,
 				A5BA9EAA2803561C00A974D4 /* Hashes.swift in Sources */,
 				A50AF02428067FAF005FF5A1 /* PasswordStruct.swift in Sources */,
@@ -680,6 +704,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
