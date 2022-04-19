@@ -25,6 +25,8 @@
 		A50AF03B280E53AE005FF5A1 /* Words.txt in Resources */ = {isa = PBXBuildFile; fileRef = A50AF039280E50E3005FF5A1 /* Words.txt */; };
 		A50AF03C280E53AE005FF5A1 /* Words.txt in Resources */ = {isa = PBXBuildFile; fileRef = A50AF039280E50E3005FF5A1 /* Words.txt */; };
 		A50AF03E280E5D01005FF5A1 /* ImageSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50AF03D280E5D01005FF5A1 /* ImageSearch.swift */; };
+		A50AF040280F3891005FF5A1 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50AF03F280F3890005FF5A1 /* AccountViewController.swift */; };
+		A50AF042280F3A6E005FF5A1 /* checkPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50AF041280F3A6E005FF5A1 /* checkPasswordViewController.swift */; };
 		A555036627FF8DB400F44E3E /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A555036527FF8DB400F44E3E /* PasswordViewController.swift */; };
 		A567FEA727FCDEEF0053A81B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A567FEA627FCDEEF0053A81B /* AppDelegate.swift */; };
 		A567FEA927FCDEEF0053A81B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A567FEA827FCDEEF0053A81B /* SceneDelegate.swift */; };
@@ -86,6 +88,8 @@
 		A50AF037280E27F9005FF5A1 /* PasswordEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordEditViewController.swift; sourceTree = "<group>"; };
 		A50AF039280E50E3005FF5A1 /* Words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Words.txt; sourceTree = "<group>"; };
 		A50AF03D280E5D01005FF5A1 /* ImageSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearch.swift; sourceTree = "<group>"; };
+		A50AF03F280F3890005FF5A1 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		A50AF041280F3A6E005FF5A1 /* checkPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkPasswordViewController.swift; sourceTree = "<group>"; };
 		A555036527FF8DB400F44E3E /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		A567FEA327FCDEEF0053A81B /* PasswordManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasswordManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A567FEA627FCDEEF0053A81B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -187,6 +191,8 @@
 				A50AF02F280BEB65005FF5A1 /* AuthManager.swift */,
 				A50AF031280E0909005FF5A1 /* SelectPasswordViewController.swift */,
 				A50AF037280E27F9005FF5A1 /* PasswordEditViewController.swift */,
+				A50AF03F280F3890005FF5A1 /* AccountViewController.swift */,
+				A50AF041280F3A6E005FF5A1 /* checkPasswordViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -516,6 +522,7 @@
 				A567FEAB27FCDEEF0053A81B /* ViewController.swift in Sources */,
 				A5EA80612802B7DA008EBB1F /* RegisterViewController.swift in Sources */,
 				A555036627FF8DB400F44E3E /* PasswordViewController.swift in Sources */,
+				A50AF040280F3891005FF5A1 /* AccountViewController.swift in Sources */,
 				A50AF0282808C455005FF5A1 /* PasswordGeneratorViewController.swift in Sources */,
 				A50AF032280E0909005FF5A1 /* SelectPasswordViewController.swift in Sources */,
 				A50AF02E280A1C8A005FF5A1 /* PassAddViewController.swift in Sources */,
@@ -526,6 +533,7 @@
 				A50AF02B2808F95A005FF5A1 /* WebsiteTableViewCell.swift in Sources */,
 				A5BA9EA82803505200A974D4 /* SecurityViewController.swift in Sources */,
 				A5BA9EAA2803561C00A974D4 /* Hashes.swift in Sources */,
+				A50AF042280F3A6E005FF5A1 /* checkPasswordViewController.swift in Sources */,
 				A50AF02428067FAF005FF5A1 /* PasswordStruct.swift in Sources */,
 				A567FEA927FCDEEF0053A81B /* SceneDelegate.swift in Sources */,
 				A50AF03E280E5D01005FF5A1 /* ImageSearch.swift in Sources */,

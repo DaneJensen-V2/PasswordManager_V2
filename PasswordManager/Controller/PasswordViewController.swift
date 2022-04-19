@@ -43,10 +43,7 @@ class PasswordViewController: UIViewController, UITableViewDelegate {
 
         }
 
-    @objc func refresh() {
-
-
-    }
+  
    public func updateTable(){
        print("update Table ran" )
         data = currentUser.hashedPasswords

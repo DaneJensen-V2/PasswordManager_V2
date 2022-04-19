@@ -13,7 +13,7 @@ import FirebaseFirestoreSwift
 import PhoneNumberKit
 
 class RegisterViewController: UIViewController {
-    var currentUser : UserData = UserData(UserID: "", firstName: "", lastName: "", hashedPasswords: [], phoneNumber: "")
+   // var currentUser : UserData = UserData(UserID: "", firstName: "", lastName: "", hashedPasswords: [], phoneNumber: "")
     @IBOutlet weak var firstNameBox: UITextField!
     @IBOutlet weak var lastNameBox: UITextField!
     @IBOutlet weak var emailBox: UITextField!
@@ -57,16 +57,16 @@ class RegisterViewController: UIViewController {
                     print(e.localizedDescription)
                 }
                 else{
-                    //Navigate to the ChatViewController
-                    self.performSegue(withIdentifier: "registerToHome", sender: nil)
-                  //  signedIn = true
+
                     let user = Auth.auth().currentUser
 
                     let newUser = UserData(UserID: user!.uid, firstName: self.firstNameBox.text!, lastName: self.lastNameBox.text!, hashedPasswords: [], phoneNumber: self.phoneNumberBox.text!)
-                     
+                    currentUser = newUser
+
                     self.addNewUser(newUser: newUser)
-                    self.currentUser = newUser
-              
+
+                    self.performSegue(withIdentifier: "registerToHome", sender: nil)
+
                     
                 }
                 
