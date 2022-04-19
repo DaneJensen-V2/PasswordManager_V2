@@ -8,10 +8,11 @@
 import UIKit
 
 class PasswordGeneratorViewController: UIViewController {
-
+    @IBOutlet weak var imageTest: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+      //  imageTest.image = imageList[0].image
         // Do any additional setup after loading the view.
     }
     

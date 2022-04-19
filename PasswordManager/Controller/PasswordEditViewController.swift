@@ -61,7 +61,7 @@ class PasswordEditViewController: UIViewController {
                 print("Error updating document: \(err)")
             } else {
                 print("Document successfully updated")
-                let customViewController = self.presentingViewController as? NewPasswordViewController
+                let customViewController = self.presentingViewController as? SelectPasswordViewController
 
                 self.dismiss(animated: true) {
 
