@@ -14,6 +14,9 @@ class checkPasswordViewController: UIViewController {
     @IBOutlet weak var outputLbel: UILabel!
     var hashedPassword = ""
     var passwordFound = false
+    var task: URLSessionDataTask?
+    let defaultSession = URLSession(configuration: .default)
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,6 +26,7 @@ class checkPasswordViewController: UIViewController {
     @IBAction func buttonClicked(_ sender: UIButton) {
         let urlString = "https://api.pwnedpasswords.com/range/5BAA6"
         performRequest(urlString: urlString) { sucess in
+            print("Checking for passwords...")
             self.CheckForMatches(password: String(self.hashedPassword.suffix(35)))
 
         }
@@ -37,26 +41,47 @@ class checkPasswordViewController: UIViewController {
     
     // Create URL
     func performRequest(urlString : String,  completion: @escaping (Bool) -> Void){
+        task?.cancel()
         
+        
+        print("Performing request...")
+        hashedList = []
          hashedPassword = hashPassword(password: passwordBox.text!)
         
         let firstFive = hashedPassword.prefix(5)
         let url = URL(string: "https://api.pwnedpasswords.com/range/" + firstFive)!
 
-        let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
-            guard let data = data else { return }
+        print(url)
+         task = defaultSession.dataTask(with: url) {(data, response, error) in
+             print("task running")
+
+             defer {
+                 self.task = nil
+                 }
+            if let error = error {
+                  print( "DataTask error: " +
+                                          error.localizedDescription + "\n")
+                }
+            
+            guard let data = data else { print("error"); return }
+            print("line after guard")
+
             let dataString = String(data: data, encoding: .utf8)!
             let listItems = dataString.split(whereSeparator: \.isNewline)
             for value in listItems{
+                //print("test")
                 let singleHash = value.split(separator: ":")
                 let newItem = Hashes(hash: String(singleHash[0]), value: Int(singleHash[1])!)
                 hashedList.append(newItem)
             }
+             print("Completion ran")
             completion(true)
             print(hashedList.count)
         }
 
-        task.resume()
+        print("line before resume")
+
+        task?.resume()
         
   }
     func updateTextFound(number : String){
@@ -97,30 +122,51 @@ class checkPasswordViewController: UIViewController {
     }
     }
     func CheckForMatches(password : String){
-        DispatchQueue.main.async { [self] in
-
+        let group = DispatchGroup()
         passwordFound = false
         print(password)
         if (hashedList.isEmpty){
+            print("Sleeping")
             usleep(5000)
         }
         else{
-        for value in hashedList{
-            if(password == value.hash){
-                updateTextFound(number : String(value.value))
-                passwordFound = true
-                print("Found!")
+            group.enter()
+           let result =  forLoopTest(password: password) { success in
+                print("Group left")
+                group.leave()
             }
             
-        }
-            usleep(5000)
-        updateTextFound(number : String(0))
+            group.wait()
+            print("Group no longer waiting")
+            if(result == 0){
+                updateTextFound(number : String(0))
+
+            }
+            else{
+            updateTextFound(number : String(result))
+            }
         print("Finished")
-    }
-    }
     }
 }
 
+    
+
+func forLoopTest(password: String, _ completion: @escaping (Bool) -> () ) -> Int{
+    for value in hashedList{
+        if(password == value.hash){
+          
+            passwordFound = true
+            print("Found!")
+            completion(true)
+            return value.value
+        }
+    }
+    completion(true)
+
+    return 0
+}
+    
+}
 extension Digest {
     var bytes: [UInt8] { Array(makeIterator()) }
     var data: Data { Data(bytes) }
