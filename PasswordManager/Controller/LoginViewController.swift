@@ -23,8 +23,9 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
     }
+    
+    
     @IBAction func loginButton(_ sender: UIButton) {
         if let email = usernameBox.text, let password = passwordBox.text{
         Auth.auth().signIn(withEmail: email, password: password) {  authResult, error in

@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-  platform :ios, '10.0'
+  platform :ios, '13.0'
 
 target 'PasswordManager' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -12,8 +12,8 @@ target 'PasswordManager' do
     pod 'IQKeyboardManagerSwift'
     source 'https://github.com/CocoaPods/Specs.git'
     pod 'PhoneNumberKit', '~> 3.3'
-
-
+    pod 'Navajo-Swift'
+   pod 'PSMeter', '~> 0.1'
   target 'PasswordManagerTests' do
     inherit! :search_paths
     # Pods for testing

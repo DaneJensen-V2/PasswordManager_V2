@@ -296,6 +296,7 @@ PODS:
     - gRPC-Core/Interface (= 1.28.2)
   - gRPC-Core/Interface (1.28.2)
   - GTMSessionFetcher/Core (1.7.1)
+  - GTProgressBar (0.3.3)
   - IQKeyboardManagerSwift (6.5.9)
   - leveldb-library (1.22.1)
   - nanopb (1.30906.0):
@@ -303,6 +304,7 @@ PODS:
     - nanopb/encode (= 1.30906.0)
   - nanopb/decode (1.30906.0)
   - nanopb/encode (1.30906.0)
+  - Navajo-Swift (2.1.0)
   - PhoneNumberKit (3.3.4):
     - PhoneNumberKit/PhoneNumberKitCore (= 3.3.4)
     - PhoneNumberKit/UIKit (= 3.3.4)
@@ -310,13 +312,18 @@ PODS:
   - PhoneNumberKit/UIKit (3.3.4):
     - PhoneNumberKit/PhoneNumberKitCore
   - PromisesObjC (1.2.12)
+  - PSMeter (0.1.3):
+    - GTProgressBar
+    - Navajo-Swift
 
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Firestore
   - FirebaseFirestoreSwift
   - IQKeyboardManagerSwift
+  - Navajo-Swift
   - PhoneNumberKit (~> 3.3)
+  - PSMeter (~> 0.1)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -333,11 +340,14 @@ SPEC REPOS:
     - "gRPC-C++"
     - gRPC-Core
     - GTMSessionFetcher
+    - GTProgressBar
     - IQKeyboardManagerSwift
     - leveldb-library
     - nanopb
+    - Navajo-Swift
     - PhoneNumberKit
     - PromisesObjC
+    - PSMeter
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
@@ -353,12 +363,15 @@ SPEC CHECKSUMS:
   "gRPC-C++": 13d8ccef97d5c3c441b7e3c529ef28ebee86fad2
   gRPC-Core: 4afa11bfbedf7cdecd04de535a9e046893404ed5
   GTMSessionFetcher: 4577a4cc914a5a07c40a8a0ad0acc22080418c2d
+  GTProgressBar: a480283ecb0ada50de16c71e634892826928f640
   IQKeyboardManagerSwift: 6e839c575c4aa1078d58a596e41244e77abe918f
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
+  Navajo-Swift: 57b93e73efbfbf452433efbff04402de56beff51
   PhoneNumberKit: 441e8b26ec88d598e3591de9061eff18f5dd12e8
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
+  PSMeter: 86aa508e05171a228c0b8faf983dd744bd99c6a0
 
-PODFILE CHECKSUM: 53d60c238d0b2cfffd3d96e8b40c69a5b55132a0
+PODFILE CHECKSUM: 9906fdd14613cb8dbfc092534bf51c90e235efe0
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.11.2

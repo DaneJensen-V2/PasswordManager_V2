@@ -42,10 +42,14 @@
 		A581683727FCE1DC00522980 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A581683427FCE1DC00522980 /* GoogleService-Info.plist */; };
 		A5BA9EA82803505200A974D4 /* SecurityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BA9EA72803505200A974D4 /* SecurityViewController.swift */; };
 		A5BA9EAA2803561C00A974D4 /* Hashes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BA9EA92803561C00A974D4 /* Hashes.swift */; };
+		A5C6E6E12817530E003954CE /* PasswordRules in Frameworks */ = {isa = PBXBuildFile; productRef = A5C6E6E02817530E003954CE /* PasswordRules */; };
+		A5C6E6E328175B5F003954CE /* GeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C6E6E228175B5F003954CE /* GeneratorViewController.swift */; };
+		A5C6E6E528177326003954CE /* CheckAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C6E6E428177326003954CE /* CheckAccountViewController.swift */; };
 		A5EA805B2802AB4D008EBB1F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EA805A2802AB4D008EBB1F /* LoginViewController.swift */; };
 		A5EA805D2802AF59008EBB1F /* layered-waves-haikei.svg in Resources */ = {isa = PBXBuildFile; fileRef = A5EA805C2802AF59008EBB1F /* layered-waves-haikei.svg */; };
 		A5EA805F2802B26C008EBB1F /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EA805E2802B26C008EBB1F /* UserData.swift */; };
 		A5EA80612802B7DA008EBB1F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EA80602802B7DA008EBB1F /* RegisterViewController.swift */; };
+		A5FFD0852815020F00B856D7 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FFD0842815020F00B856D7 /* CollectionViewCell.swift */; };
 		B89A63ECD26CED3D737FCCBB /* Pods_PasswordManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBBF8D9E382D65F25E3F5828 /* Pods_PasswordManagerTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,10 +111,13 @@
 		A581683427FCE1DC00522980 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		A5BA9EA72803505200A974D4 /* SecurityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityViewController.swift; sourceTree = "<group>"; };
 		A5BA9EA92803561C00A974D4 /* Hashes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hashes.swift; sourceTree = "<group>"; };
+		A5C6E6E228175B5F003954CE /* GeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorViewController.swift; sourceTree = "<group>"; };
+		A5C6E6E428177326003954CE /* CheckAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckAccountViewController.swift; sourceTree = "<group>"; };
 		A5EA805A2802AB4D008EBB1F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A5EA805C2802AF59008EBB1F /* layered-waves-haikei.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "layered-waves-haikei.svg"; sourceTree = "<group>"; };
 		A5EA805E2802B26C008EBB1F /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		A5EA80602802B7DA008EBB1F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		A5FFD0842815020F00B856D7 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		DBBF8D9E382D65F25E3F5828 /* Pods_PasswordManagerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PasswordManagerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFC104CC88BC91F8C761471A /* Pods-PasswordManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasswordManagerTests.debug.xcconfig"; path = "Target Support Files/Pods-PasswordManagerTests/Pods-PasswordManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				488132785F2853ACF0544771 /* Pods_PasswordManager.framework in Frameworks */,
+				A5C6E6E12817530E003954CE /* PasswordRules in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +171,7 @@
 				A50AF02328067FAF005FF5A1 /* PasswordStruct.swift */,
 				A50AF0292808F95A005FF5A1 /* WebsiteTableViewCell.swift */,
 				A50AF03D280E5D01005FF5A1 /* ImageSearch.swift */,
+				A5FFD0842815020F00B856D7 /* CollectionViewCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -193,6 +202,8 @@
 				A50AF037280E27F9005FF5A1 /* PasswordEditViewController.swift */,
 				A50AF03F280F3890005FF5A1 /* AccountViewController.swift */,
 				A50AF041280F3A6E005FF5A1 /* checkPasswordViewController.swift */,
+				A5C6E6E228175B5F003954CE /* GeneratorViewController.swift */,
+				A5C6E6E428177326003954CE /* CheckAccountViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -285,6 +296,9 @@
 			dependencies = (
 			);
 			name = PasswordManager;
+			packageProductDependencies = (
+				A5C6E6E02817530E003954CE /* PasswordRules */,
+			);
 			productName = PasswordManager;
 			productReference = A567FEA327FCDEEF0053A81B /* PasswordManager.app */;
 			productType = "com.apple.product-type.application";
@@ -360,6 +374,9 @@
 				Base,
 			);
 			mainGroup = A567FE9A27FCDEEF0053A81B;
+			packageReferences = (
+				A5C6E6DF2817530E003954CE /* XCRemoteSwiftPackageReference "PasswordRules" */,
+			);
 			productRefGroup = A567FEA427FCDEEF0053A81B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -526,12 +543,15 @@
 				A50AF0282808C455005FF5A1 /* PasswordGeneratorViewController.swift in Sources */,
 				A50AF032280E0909005FF5A1 /* SelectPasswordViewController.swift in Sources */,
 				A50AF02E280A1C8A005FF5A1 /* PassAddViewController.swift in Sources */,
+				A5C6E6E528177326003954CE /* CheckAccountViewController.swift in Sources */,
+				A5FFD0852815020F00B856D7 /* CollectionViewCell.swift in Sources */,
 				A567FEA727FCDEEF0053A81B /* AppDelegate.swift in Sources */,
 				A50AF038280E27F9005FF5A1 /* PasswordEditViewController.swift in Sources */,
 				A50AF030280BEB65005FF5A1 /* AuthManager.swift in Sources */,
 				A5EA805B2802AB4D008EBB1F /* LoginViewController.swift in Sources */,
 				A50AF02B2808F95A005FF5A1 /* WebsiteTableViewCell.swift in Sources */,
 				A5BA9EA82803505200A974D4 /* SecurityViewController.swift in Sources */,
+				A5C6E6E328175B5F003954CE /* GeneratorViewController.swift in Sources */,
 				A5BA9EAA2803561C00A974D4 /* Hashes.swift in Sources */,
 				A50AF042280F3A6E005FF5A1 /* checkPasswordViewController.swift in Sources */,
 				A50AF02428067FAF005FF5A1 /* PasswordStruct.swift in Sources */,
@@ -719,6 +739,7 @@
 				DEVELOPMENT_TEAM = KN446JPPP4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PasswordManager/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Secure;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -734,7 +755,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -749,11 +770,13 @@
 				DEVELOPMENT_TEAM = KN446JPPP4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PasswordManager/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Secure;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -763,7 +786,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -887,6 +910,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A5C6E6DF2817530E003954CE /* XCRemoteSwiftPackageReference "PasswordRules" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/NSHipster/PasswordRules";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A5C6E6E02817530E003954CE /* PasswordRules */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A5C6E6DF2817530E003954CE /* XCRemoteSwiftPackageReference "PasswordRules" */;
+			productName = PasswordRules;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A567FE9B27FCDEEF0053A81B /* Project object */;
 }
