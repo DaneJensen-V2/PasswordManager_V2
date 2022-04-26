@@ -11,15 +11,25 @@ import CryptoKit
 class checkPasswordViewController: UIViewController {
     @IBOutlet weak var passwordBox: UITextField!
     
+    @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var outputLbel: UILabel!
     var hashedPassword = ""
     var passwordFound = false
+    @IBOutlet weak var topView: UIView!
     var task: URLSessionDataTask?
     let defaultSession = URLSession(configuration: .default)
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.hideKeyboardWhenTappedAround()
+       // topView.layer.cornerRadius = 10
+       // topView.layer.borderWidth = 3
+       // topView.layer.borderColor = UIColor(named: "DarkBlue")?.cgColor
 
+        bottomView.layer.cornerRadius = 10
+        bottomView.layer.borderWidth = 3
+        bottomView.layer.borderColor = UIColor(named: "DarkBlue")?.cgColor
         // Do any additional setup after loading the view.
     }
     

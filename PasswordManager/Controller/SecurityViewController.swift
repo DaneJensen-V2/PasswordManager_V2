@@ -13,12 +13,12 @@ var hashedList = [Hashes]()
 var imageList = [Image]()
 
 class SecurityViewController: UIViewController {
-    @IBOutlet weak var passwordBox: UITextField!
+    
     @IBOutlet weak var view3: UIView!
     @IBOutlet weak var view2: UIView!
-    @IBOutlet weak var outputLabel: UILabel!
     @IBOutlet weak var buttonBackground: UIView!
     
+    @IBOutlet weak var borderview: UIView!
     @IBOutlet weak var view4: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +27,8 @@ class SecurityViewController: UIViewController {
         view2.layer.cornerRadius = 10
         view3.layer.cornerRadius = 10
         view4.layer.cornerRadius = 10
+        borderview.layer.borderWidth = 5
+        borderview.layer.borderColor = UIColor.black.cgColor
 
 
 

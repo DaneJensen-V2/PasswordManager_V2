@@ -45,6 +45,18 @@
 		A5C6E6E12817530E003954CE /* PasswordRules in Frameworks */ = {isa = PBXBuildFile; productRef = A5C6E6E02817530E003954CE /* PasswordRules */; };
 		A5C6E6E328175B5F003954CE /* GeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C6E6E228175B5F003954CE /* GeneratorViewController.swift */; };
 		A5C6E6E528177326003954CE /* CheckAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C6E6E428177326003954CE /* CheckAccountViewController.swift */; };
+		A5C6E6F22817DECF003954CE /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A5C6E6E62817DECD003954CE /* OpenSans-Light.ttf */; };
+		A5C6E6F32817DECF003954CE /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A5C6E6E72817DECD003954CE /* OpenSans-ExtraBoldItalic.ttf */; };
+		A5C6E6F42817DECF003954CE /* OpenSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A5C6E6E82817DECE003954CE /* OpenSans-Medium.ttf */; };
+		A5C6E6F52817DECF003954CE /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A5C6E6E92817DECE003954CE /* OpenSans-Italic.ttf */; };
+		A5C6E6F62817DECF003954CE /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A5C6E6EA2817DECE003954CE /* OpenSans-Bold.ttf */; };
+		A5C6E6F72817DECF003954CE /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A5C6E6EB2817DECE003954CE /* OpenSans-LightItalic.ttf */; };
+		A5C6E6F82817DECF003954CE /* OpenSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A5C6E6EC2817DECE003954CE /* OpenSans-MediumItalic.ttf */; };
+		A5C6E6F92817DECF003954CE /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A5C6E6ED2817DECE003954CE /* OpenSans-SemiBold.ttf */; };
+		A5C6E6FA2817DECF003954CE /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A5C6E6EE2817DECE003954CE /* OpenSans-ExtraBold.ttf */; };
+		A5C6E6FB2817DECF003954CE /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A5C6E6EF2817DECE003954CE /* OpenSans-Regular.ttf */; };
+		A5C6E6FC2817DECF003954CE /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A5C6E6F02817DECE003954CE /* OpenSans-SemiBoldItalic.ttf */; };
+		A5C6E6FD2817DECF003954CE /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A5C6E6F12817DECF003954CE /* OpenSans-BoldItalic.ttf */; };
 		A5EA805B2802AB4D008EBB1F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EA805A2802AB4D008EBB1F /* LoginViewController.swift */; };
 		A5EA805D2802AF59008EBB1F /* layered-waves-haikei.svg in Resources */ = {isa = PBXBuildFile; fileRef = A5EA805C2802AF59008EBB1F /* layered-waves-haikei.svg */; };
 		A5EA805F2802B26C008EBB1F /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EA805E2802B26C008EBB1F /* UserData.swift */; };
@@ -113,6 +125,18 @@
 		A5BA9EA92803561C00A974D4 /* Hashes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hashes.swift; sourceTree = "<group>"; };
 		A5C6E6E228175B5F003954CE /* GeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorViewController.swift; sourceTree = "<group>"; };
 		A5C6E6E428177326003954CE /* CheckAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckAccountViewController.swift; sourceTree = "<group>"; };
+		A5C6E6E62817DECD003954CE /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		A5C6E6E72817DECD003954CE /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		A5C6E6E82817DECE003954CE /* OpenSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Medium.ttf"; sourceTree = "<group>"; };
+		A5C6E6E92817DECE003954CE /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		A5C6E6EA2817DECE003954CE /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		A5C6E6EB2817DECE003954CE /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		A5C6E6EC2817DECE003954CE /* OpenSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-MediumItalic.ttf"; sourceTree = "<group>"; };
+		A5C6E6ED2817DECE003954CE /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		A5C6E6EE2817DECE003954CE /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		A5C6E6EF2817DECE003954CE /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		A5C6E6F02817DECE003954CE /* OpenSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		A5C6E6F12817DECF003954CE /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		A5EA805A2802AB4D008EBB1F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A5EA805C2802AF59008EBB1F /* layered-waves-haikei.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "layered-waves-haikei.svg"; sourceTree = "<group>"; };
 		A5EA805E2802B26C008EBB1F /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
@@ -242,6 +266,7 @@
 				A5EA805C2802AF59008EBB1F /* layered-waves-haikei.svg */,
 				A50AF02128062CDC005FF5A1 /* twitter.jpeg */,
 				A567FEAF27FCDEF00053A81B /* Assets.xcassets */,
+				A5C6E6FE2817DEE6003954CE /* Fonts */,
 				A581683427FCE1DC00522980 /* GoogleService-Info.plist */,
 				A567FEB427FCDEF00053A81B /* Info.plist */,
 			);
@@ -263,6 +288,25 @@
 				A567FEC927FCDEF00053A81B /* PasswordManagerUITestsLaunchTests.swift */,
 			);
 			path = PasswordManagerUITests;
+			sourceTree = "<group>";
+		};
+		A5C6E6FE2817DEE6003954CE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A5C6E6F12817DECF003954CE /* OpenSans-BoldItalic.ttf */,
+				A5C6E6EA2817DECE003954CE /* OpenSans-Bold.ttf */,
+				A5C6E6EE2817DECE003954CE /* OpenSans-ExtraBold.ttf */,
+				A5C6E6E72817DECD003954CE /* OpenSans-ExtraBoldItalic.ttf */,
+				A5C6E6E92817DECE003954CE /* OpenSans-Italic.ttf */,
+				A5C6E6E62817DECD003954CE /* OpenSans-Light.ttf */,
+				A5C6E6EB2817DECE003954CE /* OpenSans-LightItalic.ttf */,
+				A5C6E6E82817DECE003954CE /* OpenSans-Medium.ttf */,
+				A5C6E6EC2817DECE003954CE /* OpenSans-MediumItalic.ttf */,
+				A5C6E6EF2817DECE003954CE /* OpenSans-Regular.ttf */,
+				A5C6E6ED2817DECE003954CE /* OpenSans-SemiBold.ttf */,
+				A5C6E6F02817DECE003954CE /* OpenSans-SemiBoldItalic.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		EB22A48E55366F61E081A7C4 /* Pods */ = {
@@ -393,15 +437,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5C6E6F92817DECF003954CE /* OpenSans-SemiBold.ttf in Resources */,
+				A5C6E6F82817DECF003954CE /* OpenSans-MediumItalic.ttf in Resources */,
+				A5C6E6F42817DECF003954CE /* OpenSans-Medium.ttf in Resources */,
+				A5C6E6FD2817DECF003954CE /* OpenSans-BoldItalic.ttf in Resources */,
 				A50AF02228062CDC005FF5A1 /* twitter.jpeg in Resources */,
+				A5C6E6FC2817DECF003954CE /* OpenSans-SemiBoldItalic.ttf in Resources */,
 				A50AF036280E15F4005FF5A1 /* Hulu-Logo-700x394.png in Resources */,
 				A567FEB327FCDEF00053A81B /* LaunchScreen.storyboard in Resources */,
+				A5C6E6F52817DECF003954CE /* OpenSans-Italic.ttf in Resources */,
 				A581683527FCE1DC00522980 /* GoogleService-Info.plist in Resources */,
 				A50AF03A280E50E3005FF5A1 /* Words.txt in Resources */,
 				A50AF02028062236005FF5A1 /* PasswordTableViewCell.xib in Resources */,
+				A5C6E6FB2817DECF003954CE /* OpenSans-Regular.ttf in Resources */,
+				A5C6E6F62817DECF003954CE /* OpenSans-Bold.ttf in Resources */,
+				A5C6E6FA2817DECF003954CE /* OpenSans-ExtraBold.ttf in Resources */,
 				A567FEB027FCDEF00053A81B /* Assets.xcassets in Resources */,
 				A567FEAE27FCDEEF0053A81B /* Main.storyboard in Resources */,
+				A5C6E6F22817DECF003954CE /* OpenSans-Light.ttf in Resources */,
+				A5C6E6F32817DECF003954CE /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				A5EA805D2802AF59008EBB1F /* layered-waves-haikei.svg in Resources */,
+				A5C6E6F72817DECF003954CE /* OpenSans-LightItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -735,7 +791,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = KN446JPPP4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PasswordManager/Info.plist;
@@ -750,7 +806,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = DaneJApps.PasswordManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -766,7 +822,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = KN446JPPP4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PasswordManager/Info.plist;
@@ -781,7 +837,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = DaneJApps.PasswordManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

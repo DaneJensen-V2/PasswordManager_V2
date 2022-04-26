@@ -13,7 +13,19 @@ class PasswordGeneratorViewController: UIViewController {
   
    
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var capitalSwitch: UISwitch!
+    @IBOutlet weak var popupText: UILabel!
+    @IBOutlet weak var ExclamationSwitch: UISwitch!
+    @IBOutlet weak var DashSwitch: UISwitch!
+    @IBOutlet weak var outputText: UITextField!
+    @IBOutlet weak var popupView: UIView!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
+    @IBOutlet weak var finalView: UIView!
+    var exclamantionAdded = false
+    var dashesAdded = false
+    var counter = 0
+    var wordList = [String]()
+    var originalString = ""
     override func viewDidLoad() {
         super.viewDidLoad()
       //  imageTest.image = imageList[0].image
@@ -23,11 +35,11 @@ class PasswordGeneratorViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.collectionViewLayout = UICollectionViewFlowLayout()
-               
-       
+
         
     }
     override func viewDidAppear(_ animated: Bool) {
+        imageList = []
         super.viewDidAppear(true)
         beginProcess()
 
@@ -45,11 +57,6 @@ class PasswordGeneratorViewController: UIViewController {
         collectionView.isHidden = false
         collectionView.reloadData()
   
-
-     //   image2.image = imageList[1].image
-       
-    //    image4.imageView!.image = imageList[3].image
-
     }
 
     func  getImages(completion: @escaping (Bool) -> Void){
@@ -85,111 +92,153 @@ class PasswordGeneratorViewController: UIViewController {
         
     }
     func imageSearch(image: String, completion: @escaping (UIImage) -> Void){
-        
-        let headers = [
-            "X-RapidAPI-Host": "google-image-search1.p.rapidapi.com",
-            "X-RapidAPI-Key": "b1d23830cfmsh0296e66a07ace30p13e768jsnc5df9ffe1438"
-        ]
-
-        let request = NSMutableURLRequest(url: NSURL(string: "https://google-image-search1.p.rapidapi.com/v2/?q=" + image + "&hl=en")! as URL,
-                                                cachePolicy: .useProtocolCachePolicy,
-                                            timeoutInterval: 10.0)
-        request.httpMethod = "GET"
-        request.allHTTPHeaderFields = headers
-
-        let session = URLSession.shared
-        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
-            guard let data = data, error == nil else { return }
-
-                    do {
-                        // make sure this JSON is in the format we expect
-                        // convert data to json
-                        if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                            // try to read out a dictionary
-                         //   print(json)
-                            if let data = json["response"] as? [String:Any] {
-                               // print(data)
-                                if let images = data["images"] as? [[String:Any]] {
-                                   // print(images)
-                                  
-                                    let dict = images[0]
-                                   // print(dict)
-                                    if let image = dict["image"] as? [String:Any]{
-                                    //    print(image)
-                                        if let url = image["url"] as? String{
-                                            //                        print(url)
-                                            print("FOUND")
-                                             self.getImageFromUrl(urlString: url) { image in
-                                                completion(image)
-                                                 
-
-                                            }
-                                        }
-                                    }
-                                
-                            }
-                        }
-                        }
-                    } catch let error as NSError {
-                        print("Failed to load: \(error.localizedDescription)")
-                        completion(UIImage(named: "Twitter")!)
-                    }
-
-        })
-
-        dataTask.resume()
-    }
-    func getImageFromUrl(urlString : String, completion: @escaping (UIImage) -> Void){
-
-        print("getting image")
-        var newImage = UIImage(named: "Instagram")
-        if let url = URL(string: urlString) {
-            let task = URLSession.shared.dataTask(with: url) { imageData, response, error in
-                if let error = error {
-                          print("Error -> \(error)")
-                        completion(UIImage(named: "Twitter")!)
-                      }
+        print("image search")
+     
+        if let url = URL(string: "https://source.unsplash.com/featured/?" + image) {
+            let task = URLSession.shared.dataTask(with: url) { data, response, error in
+                guard let data = data, error == nil else { print(error?.localizedDescription); return }
                 
-                    print("Looking for image")
-                if imageData == nil{
-                    completion(UIImage(named: "Twitter")!)
-                }
-                else{
-                    
-                    newImage = UIImage(data: imageData!)
-                    completion(newImage!)
-                }
-               
-                
+                //DispatchQueue.main.async { /// execute on main thread
+                    completion(UIImage(data: data)!)
+                //}
             }
             
             task.resume()
         }
+    }
+    func updateTable(newWord : String){
+        if counter < 12{
+        counter = counter + 4
+        collectionView.reloadData()
+            print("reload ran")
+            wordList.append(newWord.lowercased())
+        }
+        else{
+            wordList.append(newWord.lowercased())
+            passwordComplete()
+        }
+    }
+    func passwordComplete(){
+        collectionView.isHidden = true
+        print(wordList)
+        finalView.isHidden = false
+   
+        outputText.text = wordList[0] + wordList[1] + wordList[2] + wordList[3]
+            originalString = wordList[0] + wordList[1] + wordList[2] + wordList[3]
+    }
+    
+    @IBAction func switchChanged(_ sender: UISwitch) {
+        updateText()
+    }
+    func updateText(){
+        var newString = originalString
+        if capitalSwitch.isOn{
+            var i = -1
+            for word in wordList{
+                i += 1
+                wordList[i] = word.lowercased().capitalized
+            }
+            newString = wordList[0] + wordList[1] + wordList[2] + wordList[3]
+        }
+        if capitalSwitch.isOn == false{
+            newString = newString.lowercased()
+        }
+        
+        if ExclamationSwitch.isOn && exclamantionAdded == false{
+            var i = -1
+            for word in wordList{
+                i += 1
+                wordList[i] = word + "!"
+            }
+            newString = wordList[0] + wordList[1] + wordList[2] + wordList[3]
+            exclamantionAdded = true
+        }
+        if ExclamationSwitch.isOn == false && exclamantionAdded == true{
+            var i = -1
+            for word in wordList{
+                i += 1
+                let trimmedString = word.replacingOccurrences(of: "!", with: "", options: .regularExpression)
 
+                wordList[i] = trimmedString
+            }
+            newString = wordList[0] + wordList[1] + wordList[2] + wordList[3]
+            exclamantionAdded = false
+        }
+        
+        if DashSwitch.isOn && dashesAdded == false{
+            var i = -1
+            for word in wordList{
+                i += 1
+                if(i != 3){
+                wordList[i] = word + "-"
+                }
+            }
+            newString = wordList[0] + wordList[1] + wordList[2] + wordList[3]
+            dashesAdded = true
+        }
+        if DashSwitch.isOn == false && dashesAdded == true{
+            var i = -1
+            for word in wordList{
+                i += 1
+                let trimmedString = word.replacingOccurrences(of: "-", with: "", options: .regularExpression)
 
+                wordList[i] = trimmedString
+            }
+            newString = wordList[0] + wordList[1] + wordList[2] + wordList[3]
+            dashesAdded = false
+        }
+        
+        outputText.text = newString
+    }
+
+    @IBAction func copyPressed(_ sender: UIButton) {
+        print("Password Copied")
+        popupText.text = "Password Copied"
+        popupView.alpha = 1
+
+        UIPasteboard.general.string = outputText.text
+            UIView.transition(with: finalView, duration: 0.4,
+                              options: .transitionCrossDissolve,
+                              animations: {
+                print("Transition ran")
+                self.popupView.isHidden = false
+                          })
+        Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false) { (_) in
+            UIView.animate(withDuration: 0.3, animations: { [self] in
+                popupView.alpha = 0
+            }) { (finished) in
+                print("Timer ran")
+                self.popupView.isHidden = finished
+            }
+            
+        }
     }
 }
 extension PasswordGeneratorViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imageList.count
+        print("Number Ran")
+        return imageList.count / 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        print("Cell for  Ran")
+
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
         
-        cell.cellImage.image = imageList[indexPath.row].image
-        cell.cellLabel.text = imageList[indexPath.row].imageName
+        cell.cellImage.image = imageList[indexPath.row + counter].image
+        cell.cellLabel.text = imageList[indexPath.row + counter].imageName
+        cell.layer.cornerRadius = 10
         
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(imageList[indexPath.row].imageName)
+        updateTable(newWord: imageList[indexPath.row + counter].imageName)
     }
     
 }
 
 extension PasswordGeneratorViewController : UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 200, height: 300)
+        return CGSize(width: 175, height: 300)
     }
 }
