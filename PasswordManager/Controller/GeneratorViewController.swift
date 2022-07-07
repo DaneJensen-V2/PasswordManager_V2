@@ -71,6 +71,7 @@ class GeneratorViewController: UIViewController {
               }
         outputButton.setTitle(generatedPassword, for: .normal)
         updateOutputLabel()
+        passType = "Secure"
     }
             
          

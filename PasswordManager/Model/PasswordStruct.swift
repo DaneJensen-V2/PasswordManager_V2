@@ -13,14 +13,17 @@ struct passwordStruct : Codable{
     let  Image: String
     let  Username : String
     var  Password : String
-
-    init(WebsiteName : String, WebsiteURL : URL, Image : String, Username : String, Password : String){
+    var  passwordType : String
+    var memIndex : Int
+    
+    init(WebsiteName : String, WebsiteURL : URL, Image : String, Username : String, Password : String, passwordType : String, memIndex : Int){
         self.WebsiteName = WebsiteName
         self.WebsiteURL = WebsiteURL
         self.Image = WebsiteName
         self.Username = Username
         self.Password = Password
-        
+        self.passwordType = passwordType
+        self.memIndex = memIndex
     }
 
 enum CodingKeys: String, CodingKey {
@@ -29,7 +32,8 @@ enum CodingKeys: String, CodingKey {
        case Image
        case Username
        case Password
-
+       case passwordType
+       case memIndex
    }
 
 }

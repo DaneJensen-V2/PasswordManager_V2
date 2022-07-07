@@ -23,15 +23,19 @@ class PasswordEditViewController: UIViewController {
         nameBox.text = selectedPassword.WebsiteName
         URLBox.text = selectedPassword.WebsiteURL.absoluteString
         usernameBox.text = selectedPassword.Username
-        
+        passwordBox.text = selectedPassword.Password
         
         self.hideKeyboardWhenTappedAround()
  
     }
     
+    @IBAction func eyeClicked(_ sender: UIButton) {
+        passwordBox.isSecureTextEntry = false
 
+    }
+    
     @IBAction func saveClicked(_ sender: UIButton) {
-        let newPassword = passwordStruct(WebsiteName: nameBox.text!, WebsiteURL: URL(string: URLBox.text!)!, Image: currentPassword.WebsiteName, Username: usernameBox.text!, Password: passwordBox.text!)
+        let newPassword = passwordStruct(WebsiteName: nameBox.text!, WebsiteURL: URL(string: URLBox.text!)!, Image: currentPassword.WebsiteName, Username: usernameBox.text!, Password: passwordBox.text!, passwordType: "Custom", memIndex: 0)
         
         
         let user = Auth.auth().currentUser

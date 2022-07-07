@@ -12,6 +12,7 @@ struct UserData : Codable{
     let lastName : String
     var hashedPasswords : [passwordStruct]
     let phoneNumber : String
+    var memorablePasswords : [memorablePassword]
 
 
 
@@ -21,6 +22,7 @@ enum CodingKeys: String, CodingKey {
        case lastName
        case hashedPasswords
        case phoneNumber
+       case memorablePasswords
 
    }
 

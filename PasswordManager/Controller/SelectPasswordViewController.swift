@@ -13,6 +13,7 @@ class SelectPasswordViewController: UIViewController {
 
     @IBOutlet weak var websiteLabel: UILabel!
     
+    @IBOutlet weak var practice: UIButton!
     @IBOutlet var largerView: UIView!
     @IBOutlet weak var sucessView: UIView!
     @IBOutlet weak var successLabel: UILabel!
@@ -25,6 +26,12 @@ class SelectPasswordViewController: UIViewController {
         // Do any additional setup after loading the view.
         webImage.image = UIImage(named: selectedPassword.Image)
         websiteLabel.text = selectedPassword.WebsiteName
+        if(selectedPassword.passwordType != "Memorable"){
+            practice.isEnabled = false
+        }
+        else{
+            practice.isEnabled = true
+        }
     }
     
     @IBAction func tappedOutside(_ sender: UIButton) {

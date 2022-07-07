@@ -8,7 +8,7 @@
 import UIKit
 import Firebase
 
-var currentUser = UserData(UserID: "", firstName: "", lastName: "", hashedPasswords: [], phoneNumber: ""){
+var currentUser = UserData(UserID: "", firstName: "", lastName: "", hashedPasswords: [], phoneNumber: "", memorablePasswords: []){
     didSet {
         print("arrayUpdated")
         PasswordViewController().updateTable()

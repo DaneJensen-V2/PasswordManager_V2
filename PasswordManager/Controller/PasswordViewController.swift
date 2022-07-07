@@ -6,7 +6,7 @@
 //
 
 import UIKit
-var selectedPassword = passwordStruct(WebsiteName: "", WebsiteURL: URL(string: "www.google.com")!, Image: "", Username: "", Password: "")
+var selectedPassword = passwordStruct(WebsiteName: "", WebsiteURL: URL(string: "www.google.com")!, Image: "", Username: "", Password: "", passwordType: "", memIndex: 0)
 var rowSelected = 0
 
 class PasswordViewController: UIViewController, UITableViewDelegate {
@@ -71,6 +71,15 @@ extension PasswordViewController : UITableViewDataSource{
         cell.passImage.image = UIImage(named: imageString)
         cell.websiteName.text = object.WebsiteName
         cell.usernameLabel.text = object.Username
+        if(currentUser.hashedPasswords[indexPath.row].passwordType == "Memorable"){
+            cell.passTypeImage.image = UIImage(systemName: "brain.head.profile")?.withTintColor(.systemOrange, renderingMode: .alwaysOriginal)
+        }
+        else if(currentUser.hashedPasswords[indexPath.row].passwordType == "Custom"){
+            cell.passTypeImage.image = UIImage(systemName: "gearshape")?.withTintColor(.systemGray, renderingMode: .alwaysOriginal)
+        }
+        else if(currentUser.hashedPasswords[indexPath.row].passwordType == "Secure"){
+            cell.passTypeImage.image = UIImage(systemName: "lock")?.withTintColor(UIColor.black, renderingMode: .alwaysOriginal)
+        }
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

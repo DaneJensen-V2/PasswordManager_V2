@@ -78,7 +78,7 @@ class RegisterViewController: UIViewController {
 
                     let user = Auth.auth().currentUser
 
-                    let newUser = UserData(UserID: user!.uid, firstName: self.firstNameBox.text!, lastName: self.lastNameBox.text!, hashedPasswords: [], phoneNumber: self.phoneNumberBox.text!)
+                    let newUser = UserData(UserID: user!.uid, firstName: self.firstNameBox.text!, lastName: self.lastNameBox.text!, hashedPasswords: [], phoneNumber: self.phoneNumberBox.text!, memorablePasswords: [])
                     currentUser = newUser
 
                     self.addNewUser(newUser: newUser)

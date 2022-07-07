@@ -7,6 +7,8 @@
 
 import UIKit
 import Firebase
+var passType = ""
+var passIndex = 0
 class PassAddViewController: UIViewController {
     let db = Firestore.firestore()
 
@@ -15,6 +17,7 @@ class PassAddViewController: UIViewController {
     @IBOutlet weak var nameBox: UITextField!
     @IBOutlet weak var passwordBox: UITextField!
     override func viewDidLoad() {
+        passType = "Custom"
         super.viewDidLoad()
         print(currentUser.hashedPasswords.count)
 
@@ -37,7 +40,9 @@ class PassAddViewController: UIViewController {
     
 
     @IBAction func saveClicked(_ sender: UIButton) {
-        let newPassword = passwordStruct(WebsiteName: nameBox.text!, WebsiteURL: URL(string: URLBox.text!)!, Image: currentPassword.WebsiteName, Username: usernameBox.text!, Password: passwordBox.text!)
+            let newPassword = passwordStruct(WebsiteName: nameBox.text!, WebsiteURL: URL(string: URLBox.text!)!, Image: currentPassword.WebsiteName, Username: usernameBox.text!, Password: passwordBox.text!, passwordType: passType, memIndex: passIndex)
+   
+       
         
         
         let user = Auth.auth().currentUser

@@ -3,9 +3,13 @@ import UIKit
 
 struct Image {
 
-    let imageName: String
-    let image: UIImage
+    var imageName: String
+    var image: UIImage
+    
+enum CodingKeys: String, CodingKey {
+       case imageName
+       case image
+
+   }
 
 }
-
-

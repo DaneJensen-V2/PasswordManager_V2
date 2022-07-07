@@ -27,6 +27,9 @@
 		A50AF03E280E5D01005FF5A1 /* ImageSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50AF03D280E5D01005FF5A1 /* ImageSearch.swift */; };
 		A50AF040280F3891005FF5A1 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50AF03F280F3890005FF5A1 /* AccountViewController.swift */; };
 		A50AF042280F3A6E005FF5A1 /* checkPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50AF041280F3A6E005FF5A1 /* checkPasswordViewController.swift */; };
+		A51765BD2823B7FF000FA12E /* AccountSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51765BC2823B7FF000FA12E /* AccountSelectViewController.swift */; };
+		A51765BF28242468000FA12E /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51765BE28242468000FA12E /* PracticeViewController.swift */; };
+		A51765C1282431DF000FA12E /* SelectAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51765C0282431DF000FA12E /* SelectAccountViewController.swift */; };
 		A555036627FF8DB400F44E3E /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A555036527FF8DB400F44E3E /* PasswordViewController.swift */; };
 		A567FEA727FCDEEF0053A81B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A567FEA627FCDEEF0053A81B /* AppDelegate.swift */; };
 		A567FEA927FCDEEF0053A81B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A567FEA827FCDEEF0053A81B /* SceneDelegate.swift */; };
@@ -40,6 +43,10 @@
 		A581683527FCE1DC00522980 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A581683427FCE1DC00522980 /* GoogleService-Info.plist */; };
 		A581683627FCE1DC00522980 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A581683427FCE1DC00522980 /* GoogleService-Info.plist */; };
 		A581683727FCE1DC00522980 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A581683427FCE1DC00522980 /* GoogleService-Info.plist */; };
+		A59908CC2823259D00C6699A /* memorablePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59908CB2823259D00C6699A /* memorablePassword.swift */; };
+		A59908CE2823693500C6699A /* Breach.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59908CD2823693500C6699A /* Breach.swift */; };
+		A59908D1282381E600C6699A /* BreachTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59908CF282381E600C6699A /* BreachTableViewCell.swift */; };
+		A59908D2282381E600C6699A /* BreachTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A59908D0282381E600C6699A /* BreachTableViewCell.xib */; };
 		A5BA9EA82803505200A974D4 /* SecurityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BA9EA72803505200A974D4 /* SecurityViewController.swift */; };
 		A5BA9EAA2803561C00A974D4 /* Hashes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BA9EA92803561C00A974D4 /* Hashes.swift */; };
 		A5C6E6E12817530E003954CE /* PasswordRules in Frameworks */ = {isa = PBXBuildFile; productRef = A5C6E6E02817530E003954CE /* PasswordRules */; };
@@ -106,6 +113,9 @@
 		A50AF03D280E5D01005FF5A1 /* ImageSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearch.swift; sourceTree = "<group>"; };
 		A50AF03F280F3890005FF5A1 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		A50AF041280F3A6E005FF5A1 /* checkPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkPasswordViewController.swift; sourceTree = "<group>"; };
+		A51765BC2823B7FF000FA12E /* AccountSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSelectViewController.swift; sourceTree = "<group>"; };
+		A51765BE28242468000FA12E /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
+		A51765C0282431DF000FA12E /* SelectAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAccountViewController.swift; sourceTree = "<group>"; };
 		A555036527FF8DB400F44E3E /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		A567FEA327FCDEEF0053A81B /* PasswordManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasswordManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A567FEA627FCDEEF0053A81B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -120,7 +130,11 @@
 		A567FEC327FCDEF00053A81B /* PasswordManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasswordManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A567FEC727FCDEF00053A81B /* PasswordManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordManagerUITests.swift; sourceTree = "<group>"; };
 		A567FEC927FCDEF00053A81B /* PasswordManagerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordManagerUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		A581683427FCE1DC00522980 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		A581683427FCE1DC00522980 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "PasswordManager/Fonts/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		A59908CB2823259D00C6699A /* memorablePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memorablePassword.swift; sourceTree = "<group>"; };
+		A59908CD2823693500C6699A /* Breach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breach.swift; sourceTree = "<group>"; };
+		A59908CF282381E600C6699A /* BreachTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreachTableViewCell.swift; sourceTree = "<group>"; };
+		A59908D0282381E600C6699A /* BreachTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreachTableViewCell.xib; sourceTree = "<group>"; };
 		A5BA9EA72803505200A974D4 /* SecurityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityViewController.swift; sourceTree = "<group>"; };
 		A5BA9EA92803561C00A974D4 /* Hashes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hashes.swift; sourceTree = "<group>"; };
 		A5C6E6E228175B5F003954CE /* GeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorViewController.swift; sourceTree = "<group>"; };
@@ -192,10 +206,14 @@
 				A5BA9EA92803561C00A974D4 /* Hashes.swift */,
 				A50AF01D28062236005FF5A1 /* PasswordTableViewCell.swift */,
 				A50AF01E28062236005FF5A1 /* PasswordTableViewCell.xib */,
-				A50AF02328067FAF005FF5A1 /* PasswordStruct.swift */,
 				A50AF0292808F95A005FF5A1 /* WebsiteTableViewCell.swift */,
 				A50AF03D280E5D01005FF5A1 /* ImageSearch.swift */,
+				A50AF02328067FAF005FF5A1 /* PasswordStruct.swift */,
 				A5FFD0842815020F00B856D7 /* CollectionViewCell.swift */,
+				A59908CB2823259D00C6699A /* memorablePassword.swift */,
+				A59908CD2823693500C6699A /* Breach.swift */,
+				A59908CF282381E600C6699A /* BreachTableViewCell.swift */,
+				A59908D0282381E600C6699A /* BreachTableViewCell.xib */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -228,6 +246,9 @@
 				A50AF041280F3A6E005FF5A1 /* checkPasswordViewController.swift */,
 				A5C6E6E228175B5F003954CE /* GeneratorViewController.swift */,
 				A5C6E6E428177326003954CE /* CheckAccountViewController.swift */,
+				A51765BC2823B7FF000FA12E /* AccountSelectViewController.swift */,
+				A51765BE28242468000FA12E /* PracticeViewController.swift */,
+				A51765C0282431DF000FA12E /* SelectAccountViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -267,7 +288,6 @@
 				A50AF02128062CDC005FF5A1 /* twitter.jpeg */,
 				A567FEAF27FCDEF00053A81B /* Assets.xcassets */,
 				A5C6E6FE2817DEE6003954CE /* Fonts */,
-				A581683427FCE1DC00522980 /* GoogleService-Info.plist */,
 				A567FEB427FCDEF00053A81B /* Info.plist */,
 			);
 			path = PasswordManager;
@@ -305,6 +325,7 @@
 				A5C6E6EF2817DECE003954CE /* OpenSans-Regular.ttf */,
 				A5C6E6ED2817DECE003954CE /* OpenSans-SemiBold.ttf */,
 				A5C6E6F02817DECE003954CE /* OpenSans-SemiBoldItalic.ttf */,
+				A581683427FCE1DC00522980 /* GoogleService-Info.plist */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -443,6 +464,7 @@
 				A5C6E6FD2817DECF003954CE /* OpenSans-BoldItalic.ttf in Resources */,
 				A50AF02228062CDC005FF5A1 /* twitter.jpeg in Resources */,
 				A5C6E6FC2817DECF003954CE /* OpenSans-SemiBoldItalic.ttf in Resources */,
+				A59908D2282381E600C6699A /* BreachTableViewCell.xib in Resources */,
 				A50AF036280E15F4005FF5A1 /* Hulu-Logo-700x394.png in Resources */,
 				A567FEB327FCDEF00053A81B /* LaunchScreen.storyboard in Resources */,
 				A5C6E6F52817DECF003954CE /* OpenSans-Italic.ttf in Resources */,
@@ -589,16 +611,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A51765C1282431DF000FA12E /* SelectAccountViewController.swift in Sources */,
+				A59908CE2823693500C6699A /* Breach.swift in Sources */,
 				A50AF01F28062236005FF5A1 /* PasswordTableViewCell.swift in Sources */,
 				A5EA805F2802B26C008EBB1F /* UserData.swift in Sources */,
 				A50AF0262808B491005FF5A1 /* NewPasswordViewController.swift in Sources */,
 				A567FEAB27FCDEEF0053A81B /* ViewController.swift in Sources */,
 				A5EA80612802B7DA008EBB1F /* RegisterViewController.swift in Sources */,
 				A555036627FF8DB400F44E3E /* PasswordViewController.swift in Sources */,
+				A59908CC2823259D00C6699A /* memorablePassword.swift in Sources */,
 				A50AF040280F3891005FF5A1 /* AccountViewController.swift in Sources */,
 				A50AF0282808C455005FF5A1 /* PasswordGeneratorViewController.swift in Sources */,
 				A50AF032280E0909005FF5A1 /* SelectPasswordViewController.swift in Sources */,
 				A50AF02E280A1C8A005FF5A1 /* PassAddViewController.swift in Sources */,
+				A51765BD2823B7FF000FA12E /* AccountSelectViewController.swift in Sources */,
 				A5C6E6E528177326003954CE /* CheckAccountViewController.swift in Sources */,
 				A5FFD0852815020F00B856D7 /* CollectionViewCell.swift in Sources */,
 				A567FEA727FCDEEF0053A81B /* AppDelegate.swift in Sources */,
@@ -608,11 +634,13 @@
 				A50AF02B2808F95A005FF5A1 /* WebsiteTableViewCell.swift in Sources */,
 				A5BA9EA82803505200A974D4 /* SecurityViewController.swift in Sources */,
 				A5C6E6E328175B5F003954CE /* GeneratorViewController.swift in Sources */,
+				A59908D1282381E600C6699A /* BreachTableViewCell.swift in Sources */,
 				A5BA9EAA2803561C00A974D4 /* Hashes.swift in Sources */,
 				A50AF042280F3A6E005FF5A1 /* checkPasswordViewController.swift in Sources */,
 				A50AF02428067FAF005FF5A1 /* PasswordStruct.swift in Sources */,
 				A567FEA927FCDEEF0053A81B /* SceneDelegate.swift in Sources */,
 				A50AF03E280E5D01005FF5A1 /* ImageSearch.swift in Sources */,
+				A51765BF28242468000FA12E /* PracticeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -791,7 +819,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = KN446JPPP4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PasswordManager/Info.plist;
@@ -806,7 +834,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = DaneJApps.PasswordManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -822,7 +850,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = KN446JPPP4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PasswordManager/Info.plist;
@@ -837,7 +865,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = DaneJApps.PasswordManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

@@ -6,21 +6,21 @@
 //
 
 import UIKit
-var currentPassword = passwordStruct(WebsiteName: "", WebsiteURL: URL(string: "www.google.com")!, Image: "", Username: "", Password: "")
+var currentPassword = passwordStruct(WebsiteName: "", WebsiteURL: URL(string: "www.google.com")!, Image: "", Username: "", Password: "", passwordType: "", memIndex: 0)
 
 
 class NewPasswordViewController: UIViewController {
     @IBOutlet weak var searchcController: UISearchBar!
-
-    let Twitter = passwordStruct(WebsiteName: "Twitter", WebsiteURL: URL(string: "https://twitter.com/login?lang=en")!, Image: "Twitter", Username: "", Password: "")
-    let Facebook = passwordStruct(WebsiteName: "Facebook", WebsiteURL: URL(string: "https://www.facebook.com/login/")!, Image: "Facebook", Username: "", Password: "")
-    let Instagram = passwordStruct(WebsiteName: "Instagram", WebsiteURL: URL(string: "https://www.instagram.com/login")!, Image: "Instagram", Username: "", Password: "")
-    let Google = passwordStruct(WebsiteName: "Google", WebsiteURL: URL(string: "https://accounts.google.com/login")!, Image: "Google", Username: "", Password: "")
-    let ASU = passwordStruct(WebsiteName: "ASU", WebsiteURL: URL(string: "https://weblogin.asu.edu/cas/login")!, Image: "ASU", Username: "", Password: "")
-    let LinkedIn = passwordStruct(WebsiteName: "LinkedIn", WebsiteURL: URL(string: "https://www.linkedin.com/login")!, Image: "LinkedIn", Username: "", Password: "")
-    let Amazon = passwordStruct(WebsiteName: "Amazon", WebsiteURL: URL(string: "https://www.amazon.com/log")!, Image: "Amazon", Username: "", Password: "")
-    let Netflix = passwordStruct(WebsiteName: "Netflix", WebsiteURL: URL(string: "https://www.netflix.com/login")!, Image: "Netflix", Username: "", Password: "")
-    let Hulu = passwordStruct(WebsiteName: "Hulu", WebsiteURL: URL(string: "https://www.hulu.com/account/signin")!, Image: "Hulu", Username: "", Password: "")
+    let Custom = passwordStruct(WebsiteName: "Custom", WebsiteURL: URL(string: "https://")!, Image: "", Username: "", Password: "", passwordType: "", memIndex: 0)
+    let Twitter = passwordStruct(WebsiteName: "Twitter", WebsiteURL: URL(string: "https://twitter.com/login?lang=en")!, Image: "Twitter", Username: "", Password: "", passwordType: "", memIndex: 0)
+    let Facebook = passwordStruct(WebsiteName: "Facebook", WebsiteURL: URL(string: "https://www.facebook.com/login/")!, Image: "Facebook", Username: "", Password: "", passwordType: "", memIndex: 0)
+    let Instagram = passwordStruct(WebsiteName: "Instagram", WebsiteURL: URL(string: "https://www.instagram.com/login")!, Image: "Instagram", Username: "", Password: "", passwordType: "", memIndex: 0)
+    let Google = passwordStruct(WebsiteName: "Google", WebsiteURL: URL(string: "https://accounts.google.com/login")!, Image: "Google", Username: "", Password: "", passwordType: "", memIndex: 0)
+    let ASU = passwordStruct(WebsiteName: "ASU", WebsiteURL: URL(string: "https://weblogin.asu.edu/cas/login")!, Image: "ASU", Username: "", Password: "", passwordType: "", memIndex: 0)
+    let LinkedIn = passwordStruct(WebsiteName: "LinkedIn", WebsiteURL: URL(string: "https://www.linkedin.com/login")!, Image: "LinkedIn", Username: "", Password: "", passwordType: "", memIndex: 0)
+    let Amazon = passwordStruct(WebsiteName: "Amazon", WebsiteURL: URL(string: "https://www.amazon.com/log")!, Image: "Amazon", Username: "", Password: "", passwordType: "", memIndex: 0)
+    let Netflix = passwordStruct(WebsiteName: "Netflix", WebsiteURL: URL(string: "https://www.netflix.com/login")!, Image: "Netflix", Username: "", Password: "", passwordType: "", memIndex: 0)
+    let Hulu = passwordStruct(WebsiteName: "Hulu", WebsiteURL: URL(string: "https://www.hulu.com/account/signin")!, Image: "Hulu", Username: "", Password: "", passwordType: "", memIndex: 0)
     
 
     
@@ -31,6 +31,7 @@ class NewPasswordViewController: UIViewController {
     //var filteredData : [String]!
     @IBOutlet weak var websiteTable: UITableView!
     override func viewDidLoad() {
+        data.append(Custom)
         data.append(Twitter)
         data.append(Facebook)
         data.append(Instagram)

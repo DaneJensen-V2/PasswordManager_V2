@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 
 class PasswordGeneratorViewController: UIViewController {
@@ -24,8 +25,10 @@ class PasswordGeneratorViewController: UIViewController {
     var exclamantionAdded = false
     var dashesAdded = false
     var counter = 0
-    var wordList = [String]()
+    var wordList = [Image]()
     var originalString = ""
+    let db = Firestore.firestore()
+
     override func viewDidLoad() {
         super.viewDidLoad()
       //  imageTest.image = imageList[0].image
@@ -106,15 +109,15 @@ class PasswordGeneratorViewController: UIViewController {
             task.resume()
         }
     }
-    func updateTable(newWord : String){
+    func updateTable(newImage : Image){
         if counter < 12{
         counter = counter + 4
         collectionView.reloadData()
             print("reload ran")
-            wordList.append(newWord.lowercased())
+            wordList.append(newImage)
         }
         else{
-            wordList.append(newWord.lowercased())
+            wordList.append(newImage)
             passwordComplete()
         }
     }
@@ -123,8 +126,8 @@ class PasswordGeneratorViewController: UIViewController {
         print(wordList)
         finalView.isHidden = false
    
-        outputText.text = wordList[0] + wordList[1] + wordList[2] + wordList[3]
-            originalString = wordList[0] + wordList[1] + wordList[2] + wordList[3]
+        outputText.text = wordList[0].imageName + wordList[1].imageName + wordList[2].imageName + wordList[3].imageName
+        originalString = wordList[0].imageName + wordList[1].imageName + wordList[2].imageName + wordList[3].imageName
     }
     
     @IBAction func switchChanged(_ sender: UISwitch) {
@@ -136,9 +139,9 @@ class PasswordGeneratorViewController: UIViewController {
             var i = -1
             for word in wordList{
                 i += 1
-                wordList[i] = word.lowercased().capitalized
+                wordList[i].imageName = word.imageName.lowercased().capitalized
             }
-            newString = wordList[0] + wordList[1] + wordList[2] + wordList[3]
+            newString = wordList[0].imageName + wordList[1].imageName + wordList[2].imageName + wordList[3].imageName
         }
         if capitalSwitch.isOn == false{
             newString = newString.lowercased()
@@ -148,20 +151,20 @@ class PasswordGeneratorViewController: UIViewController {
             var i = -1
             for word in wordList{
                 i += 1
-                wordList[i] = word + "!"
+                wordList[i].imageName = word.imageName + "!"
             }
-            newString = wordList[0] + wordList[1] + wordList[2] + wordList[3]
+            newString = wordList[0].imageName + wordList[1].imageName + wordList[2].imageName + wordList[3].imageName
             exclamantionAdded = true
         }
         if ExclamationSwitch.isOn == false && exclamantionAdded == true{
             var i = -1
             for word in wordList{
                 i += 1
-                let trimmedString = word.replacingOccurrences(of: "!", with: "", options: .regularExpression)
+                let trimmedString = word.imageName.replacingOccurrences(of: "!", with: "", options: .regularExpression)
 
-                wordList[i] = trimmedString
+                wordList[i].imageName = trimmedString
             }
-            newString = wordList[0] + wordList[1] + wordList[2] + wordList[3]
+            newString = wordList[0].imageName + wordList[1].imageName + wordList[2].imageName + wordList[3].imageName
             exclamantionAdded = false
         }
         
@@ -170,21 +173,21 @@ class PasswordGeneratorViewController: UIViewController {
             for word in wordList{
                 i += 1
                 if(i != 3){
-                wordList[i] = word + "-"
+                    wordList[i].imageName = word.imageName + "-"
                 }
             }
-            newString = wordList[0] + wordList[1] + wordList[2] + wordList[3]
+            newString = wordList[0].imageName + wordList[1].imageName + wordList[2].imageName + wordList[3].imageName
             dashesAdded = true
         }
         if DashSwitch.isOn == false && dashesAdded == true{
             var i = -1
             for word in wordList{
                 i += 1
-                let trimmedString = word.replacingOccurrences(of: "-", with: "", options: .regularExpression)
+                let trimmedString = word.imageName.replacingOccurrences(of: "-", with: "", options: .regularExpression)
 
-                wordList[i] = trimmedString
+                wordList[i].imageName = trimmedString
             }
-            newString = wordList[0] + wordList[1] + wordList[2] + wordList[3]
+            newString = wordList[0].imageName + wordList[1].imageName + wordList[2].imageName + wordList[3].imageName
             dashesAdded = false
         }
         
@@ -210,7 +213,44 @@ class PasswordGeneratorViewController: UIViewController {
                 print("Timer ran")
                 self.popupView.isHidden = finished
             }
+            let user = Auth.auth().currentUser
+
+            let currentuserID = user?.uid
+            let currentUserDB = self.db.collection("Users").document(currentuserID!)
+
+            var encodableList = memorablePassword(Name: [], Image: [])
             
+            for image in self.wordList{
+                encodableList.Name.append(image.imageName)
+                let img = image.image.jpegData(compressionQuality: 0.3)?.base64EncodedString() ?? ""
+                encodableList.Image.append(img)
+            }
+            let encoded: [String: Any]
+                    do {
+                        // encode the swift struct instance into a dictionary
+                        // using the Firestore encoder
+                        encoded = try Firestore.Encoder().encode(encodableList)
+                    } catch {
+                        // encoding error
+                        print("ENCODING ERROR")
+                        print(error)
+                        return
+                    }
+
+            currentUserDB.updateData([
+                "memorablePasswords" : FieldValue.arrayUnion([encoded])
+            ]) { err in
+                if let err = err {
+                    print("Error updating document: \(err)")
+                } else {
+                    print("Document successfully updated")
+                    currentUser.memorablePasswords.append(encodableList)
+                    passType = "Memorable"
+                    passIndex = currentUser.memorablePasswords.count - 1
+                    self.dismiss(animated: true, completion: nil)
+            }
+        }
+
         }
     }
 }
@@ -232,7 +272,8 @@ extension PasswordGeneratorViewController : UICollectionViewDataSource {
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        updateTable(newWord: imageList[indexPath.row + counter].imageName)
+        imageList[indexPath.row + counter].imageName = imageList[indexPath.row + counter].imageName.lowercased()
+        updateTable(newImage: imageList[indexPath.row + counter])
     }
     
 }

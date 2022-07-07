@@ -6,13 +6,16 @@
 //
 
 import UIKit
+import Firebase
 
 class AccountViewController: UIViewController {
 
+    @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var helloLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         helloLabel.text = "Hello " + currentUser.firstName + " " + currentUser.lastName
+        emailLabel.text = auth.currentUser?.email
         // Do any additional setup after loading the view.
     }
     
@@ -21,14 +24,50 @@ class AccountViewController: UIViewController {
         AuthManager().logout()
         performSegue(withIdentifier: "logout", sender: nil)
     }
-    /*
-    // MARK: - Navigation
+   
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+     @IBAction func changePassword(_ sender: UIButton) {
+         Auth.auth().sendPasswordReset(withEmail: "dejense4@asu.edu") { error in
+             print(error)
+         }
+         let alert = UIAlertController(title: "Confirmation", message: "Password reset Email sent.", preferredStyle: .alert)
+         alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
+         self.present(alert, animated: true)
+
+     }
+  
+
+    @IBAction func deleteAccount(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Delete Account", message: "Do you want to permanantely delete your account? This action cannot be undone", preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action: UIAlertAction!) in
+            let user = auth.currentUser
+            let currentuserID2 = user?.uid
+
+            db.collection("Users").document(currentuserID2!).delete() { err in
+                if let err = err {
+                    print("Error removing document: \(err)")
+                } else {
+                    print("Document successfully removed!")
+                }
+            }
+            
+            user?.delete { error in
+              if let error = error {
+                print(error)
+              } else {
+                self.performSegue(withIdentifier: "logout", sender: nil)
+                  
+              }
+            }
+        
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
+
+
+        self.present(alert, animated: true)
     }
-    */
-
+    func deleteAccountY(){
+        
+    }
 }

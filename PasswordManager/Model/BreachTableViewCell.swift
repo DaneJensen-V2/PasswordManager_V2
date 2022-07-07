@@ -1,18 +1,16 @@
 //
-//  PasswordTableViewCell.swift
+//  BreachTableViewCell.swift
 //  PasswordManager
 //
-//  Created by Dane Jensen on 4/12/22.
+//  Created by Dane Jensen on 5/4/22.
 //
 
 import UIKit
 
-class PasswordTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var passTypeImage: UIImageView!
-    @IBOutlet weak var websiteName: UILabel!
-    @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var passImage: UIImageView!
+class BreachTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var cellImage: UIImageView!
+    @IBOutlet weak var cellLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

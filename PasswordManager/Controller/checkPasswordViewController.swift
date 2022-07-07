@@ -21,6 +21,7 @@ class checkPasswordViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        selectedPassword2 = ""
         
         self.hideKeyboardWhenTappedAround()
        // topView.layer.cornerRadius = 10
@@ -31,6 +32,10 @@ class checkPasswordViewController: UIViewController {
         bottomView.layer.borderWidth = 3
         bottomView.layer.borderColor = UIColor(named: "DarkBlue")?.cgColor
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        passwordBox.text = selectedPassword2
     }
     
     @IBAction func buttonClicked(_ sender: UIButton) {

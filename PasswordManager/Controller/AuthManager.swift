@@ -13,11 +13,9 @@ class AuthManager{
     let db = Firestore.firestore()
 
     static let shared = AuthManager()
-    
-    
     private var verificationID : String?
     
-   
+    
     func loadCurrentUser(user : User,  completion: @escaping (Bool) -> Void){
         print("ID: " + user.uid)
         let docRef = db.collection("Users").document(user.uid)
