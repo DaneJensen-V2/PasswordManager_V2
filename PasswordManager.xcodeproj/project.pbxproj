@@ -30,6 +30,7 @@
 		A51765BD2823B7FF000FA12E /* AccountSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51765BC2823B7FF000FA12E /* AccountSelectViewController.swift */; };
 		A51765BF28242468000FA12E /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51765BE28242468000FA12E /* PracticeViewController.swift */; };
 		A51765C1282431DF000FA12E /* SelectAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51765C0282431DF000FA12E /* SelectAccountViewController.swift */; };
+		A523FABC28778193007D4B1C /* Screenshots in Resources */ = {isa = PBXBuildFile; fileRef = A523FABB28778193007D4B1C /* Screenshots */; };
 		A555036627FF8DB400F44E3E /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A555036527FF8DB400F44E3E /* PasswordViewController.swift */; };
 		A567FEA727FCDEEF0053A81B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A567FEA627FCDEEF0053A81B /* AppDelegate.swift */; };
 		A567FEA927FCDEEF0053A81B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A567FEA827FCDEEF0053A81B /* SceneDelegate.swift */; };
@@ -116,6 +117,7 @@
 		A51765BC2823B7FF000FA12E /* AccountSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSelectViewController.swift; sourceTree = "<group>"; };
 		A51765BE28242468000FA12E /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
 		A51765C0282431DF000FA12E /* SelectAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAccountViewController.swift; sourceTree = "<group>"; };
+		A523FABB28778193007D4B1C /* Screenshots */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Screenshots; sourceTree = "<group>"; };
 		A555036527FF8DB400F44E3E /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		A567FEA327FCDEEF0053A81B /* PasswordManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasswordManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A567FEA627FCDEEF0053A81B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 		A567FE9A27FCDEEF0053A81B = {
 			isa = PBXGroup;
 			children = (
+				A523FABB28778193007D4B1C /* Screenshots */,
 				A567FEA527FCDEEF0053A81B /* PasswordManager */,
 				A567FEBC27FCDEF00053A81B /* PasswordManagerTests */,
 				A567FEC627FCDEF00053A81B /* PasswordManagerUITests */,
@@ -480,6 +483,7 @@
 				A5C6E6F32817DECF003954CE /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				A5EA805D2802AF59008EBB1F /* layered-waves-haikei.svg in Resources */,
 				A5C6E6F72817DECF003954CE /* OpenSans-LightItalic.ttf in Resources */,
+				A523FABC28778193007D4B1C /* Screenshots in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
